@@ -1,0 +1,26 @@
+{
+  "name": "elegent",
+  "version": "1.0.0",
+  "description": "The fastest way to be fashionable",
+  "main": "test.js",
+  "dependencies": {
+    "eslint": "^4.15.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facg3/Elegant-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facg3/Elegant-Project/issues"
+  },
+  "homepage": "https://github.com/facg3/Elegant-Project#readme"
+}
