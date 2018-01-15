@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Elegant</title>
+  <link rel="stylesheet" href="css/contactus.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/imgs/icon.ico" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+</head>
+  <body>
+    <header>
+      <form id="headerForm" class="headerForm" action="" method="post">
+        <input type="submit" name="" value="Login">
+        <input type="submit" name="" value="Sign Up">
+      </form>
+    </header>
+      <div class="burgerAndLogo" id="burgerAndLogo">
+        <div></div>
+    <div><img src="./imgs/logo.png" alt="logo" class="logo"></div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn unactive"onclick="closeNav()">&times;</a>
+      <a href="/home" class="unactive">Home</a>
+      <a href="/aboutus" class="unactive">About Us</a>
+      <a href="/menfashion" class="unactive">Men Fashion</a>
+      <a href="/womenfashion" class="unactive">Women Fashion</a>
+      <a href="/blog" class="unactive">Blog</a>
+      <a href="/outfitsmen" class="unactive">Outfits Men</a>
+      <a href="/outfitswomen" class="unactive">Outfits Women</a>
+      <a href="/contactus" class="active">Contact Us</a>
+      <a href="/logout" class="unactive">Logout</a>
+    </div>
+      <div class="burgerButton" onclick="openNav()">
+          <div class="slice"></div>
+          <div class="slice"></div>
+          <div class="slice"></div>
+      </div>
+    </div>
+    <center>
+    <div class="container" id="container">
+      <h1>Contact Us</h1>
+      <form class="contact" action="#" method="post">
+        <div class="information">
+          <input type="text" name="name" value="" class="name" placeholder="Your name">
+          <input type="email" name="email" value="" class="email" placeholder="Your email">
+        </div>
+        <textarea name="comment" rows="14" cols="88" placeholder="Your message"></textarea>
+        <button type="submit" name="button" id="btn">Send</button>
+      </form>
+    </div>
+  </center>
+    <footer>2018 Elegant.com © All Rights Reserved</footer>
+  </body>
+  <script type="text/javascript">
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</html>
