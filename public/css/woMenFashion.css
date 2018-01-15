@@ -1,0 +1,141 @@
+body{
+margin: 0px;
+padding: 0px;
+height: 100vh;
+width: 100%;
+}
+
+.container{
+  width: 1140px;
+  flex-wrap: wrap;
+
+}
+.containernav{
+  display: flex;
+  width: 1140px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.bigContainer{
+  display: flex;
+  flex-direction: column;
+    flex-wrap: wrap;
+}
+header{
+height: 40px;
+background-color: #752223;
+display: flex;
+justify-content: flex-end;
+}
+.headerForm{
+display: flex;
+align-items: center;
+align: left;
+margin-right: 10px;
+}
+input{
+background-color: #742223;
+border: 0;
+color: white;
+font-family: Roboto;
+font-style: Regular;
+font-size: 15px;
+}
+input:hover{
+font-size: 17px;
+color: #eae4ac;
+cursor: pointer;
+}
+
+.navbar{
+display: flex;
+padding-left: 15px;
+padding-right: 15px;
+height: 70px;
+background-color: #FAFAFA;
+align-items: center;
+justify-content: center;
+}
+
+.navigationItems{
+  justify-content: center;
+  /*padding-right: 240px;*/
+
+}
+.navigationItems ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0px;
+}
+.navigationItems a{
+  font-family: Roboto;
+  text-decoration: none;
+  color: #752223;
+  display: block;
+  padding: 18px;
+  font-weight: bold;
+  text-align: center;
+
+}
+.navigationItems a:hover{
+  text-decoration: underline;
+}
+.navbar .logo{
+  width: 100px;
+  height: 50px;
+  }
+  .navbar .star{
+    width: 30px;
+  }
+  .navImg{
+    align-items: center;
+  }
+  footer{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #752223;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: white;
+}
+.boxs{
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 265px;
+  height: 365px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+.innerbox{
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 260px;
+  border: 1px solid #828282;
+}
+.innerbox img{
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+}
+.box p:nth-child(3) {
+    color: #752223;
+}
