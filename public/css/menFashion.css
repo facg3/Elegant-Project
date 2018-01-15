@@ -1,0 +1,138 @@
+body{
+margin: 0px;
+padding: 0px;
+height: 100vh;
+width: 100%;
+}
+
+.container{
+  width: 1140px;
+  justify-content: center;
+}
+.containernav{
+  display: flex;
+  width: 1140px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.bigContainer{
+  display: flex;
+  flex-direction: column;
+}
+header{
+height: 40px;
+background-color: #752223;
+display: flex;
+justify-content: flex-end;
+}
+.headerForm{
+display: flex;
+align-items: center;
+align: left;
+margin-right: 10px;
+}
+input{
+background-color: #742223;
+border: 0;
+color: white;
+font-family: Roboto;
+font-style: Regular;
+font-size: 15px;
+}
+input:hover{
+font-size: 17px;
+color: #eae4ac;
+cursor: pointer;
+}
+
+.navbar{
+display: flex;
+padding-left: 15px;
+padding-right: 15px;
+height: 70px;
+background-color: #FAFAFA;
+align-items: center;
+justify-content: center;
+}
+
+.navigationItems{
+  justify-content: center;
+  /*padding-right: 240px;*/
+
+}
+.navigationItems ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0px;
+}
+.navigationItems a{
+  font-family: Roboto;
+  text-decoration: none;
+  color: #752223;
+  display: block;
+  padding: 18px;
+  font-weight: bold;
+  text-align: center;
+
+}
+.navigationItems a:hover{
+  text-decoration: underline;
+}
+.navbar .logo{
+  width: 100px;
+  height: 50px;
+  }
+  .navbar .star{
+    width: 30px;
+  }
+  .navImg{
+    align-items: center;
+  }
+  footer{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #752223;
+    /*position: absolute;*/
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: white;
+}
+
+.box {
+  width: 360px;
+  height: 435px;
+  margin-bottom: 10px;
+}
+
+.box p:nth-child(3) {
+    color: #752223;
+}
+.innerbox{
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+  height: 360px;
+  border: 1px solid #828282;
+}
+.boxs{
+  display: flex;
+  justify-content: space-between;
+}
+.row{
+    margin-top: 30px;
+}
+
+.innerbox img{
+  width: 95%;
+  height: 95%;
+  border-radius: 10px;
+}
