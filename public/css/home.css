@@ -1,0 +1,116 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100%;
+  background-color: #F7F7F7;
+}
+/* start header */
+header{
+  height: 40px;
+  background-color: #752223;
+  display: flex;
+  justify-content: flex-end;
+}
+#headerForm{
+  display: flex;
+  align-items: center;
+  align: left;
+  margin-right:  10px;
+}
+
+input{
+  background-color: #742223;
+  border: 0;
+  color: white;
+  font-family:  Roboto;
+  font-style: Regular;
+  font-size: 15px;
+}
+
+input:hover{
+  font-size: 17px;
+  color: #eae4ac;
+  cursor: pointer;
+}
+ /* end header */
+/* burger and logo */
+#burgerAndLogo{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+#logo{
+  margin-right: 45%;
+  height: 69px;
+  width: 140px;
+}
+
+ /* start burgerButton */
+ #burgerButton{
+   margin-left: 58px;
+   margin-top: 16px;
+ }
+ #slice{
+   width: 40px;
+   height: 5px;
+   background-color: #9E7945;
+   margin-bottom: 5px;
+ }
+ /* end burgerButton */
+ /* end burder and logo*/
+
+ /* start container body */
+ p{
+   font-size: 28px;
+   font-family: Playfair Displa;
+   font-style: normal;
+ }
+ #pMan{
+   margin-top: 97px;
+       margin-left: 52px;
+ }
+ #pWoman{
+   margin-top: 12em;
+ }
+ #container{
+   display: flex;
+ }
+ #imgMan{
+   width: 226px;
+   height: 526px;
+   margin-right: 9px;
+   position: relative;
+   bottom: 45px;
+ }
+ #imgWoman{
+   width: 290px;
+   height: 523px;
+   margin-top: 6px;
+   margin-left: 20px;
+ }
+ #womanStyle{
+   display: flex;
+ }
+ #manStyle{
+   display: flex;
+ }
+
+ #line{
+   border: 3px solid white;
+   position: relative;
+   transform: rotate(25deg);
+   transform-origin: 100% 0%;
+    border-right-width: 0px;
+    right: 133px;
+    width: 1432px;
+    left: -56;
+    border-left-width: 0px;
+    bottom: 7px;
+    z-index: -1;
+ }
+
+ /*end container body*/
