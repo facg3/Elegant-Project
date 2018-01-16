@@ -1,9 +1,8 @@
 body{
   margin: 0px;
   padding: 0px;
-  height: 100vh;
-  width: 100%;
   background-color: #F7F7F7;
+  height: 100vh;
 }
 /* start header */
 header{
@@ -11,6 +10,7 @@ header{
   background-color: #752223;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 #headerForm{
   display: flex;
@@ -34,6 +34,34 @@ input:hover{
   cursor: pointer;
 }
  /* end header */
+ /* start side bar */
+ .sidebar{
+   width: 165px;
+   height: 100%;
+   background-color: #752223;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   position: fixed;
+   transform:translateX(-200px);
+   transition: transform 0.5s;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.sidebar a:hover {
+    background-color: #521314b3;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 1, 1);
+    border-radius: 5.5px;
+}
+ .active {
+   transform:translateX(0);
+ }
+ /* end side bar */
 /* burger and logo */
 #burgerAndLogo{
   display: flex;
@@ -48,18 +76,14 @@ input:hover{
   height: 69px;
   width: 140px;
 }
-
  /* start burgerButton */
- #burgerButton{
-   margin-left: 58px;
-   margin-top: 16px;
+ .material-icons{
+   cursor: pointer;
+   font-size: 56px;
+   color: #9E7945;
+   transform:translateX(58px);
  }
- #slice{
-   width: 40px;
-   height: 5px;
-   background-color: #9E7945;
-   margin-bottom: 5px;
- }
+
  /* end burgerButton */
  /* end burder and logo*/
 
@@ -80,7 +104,7 @@ input:hover{
    display: flex;
  }
  #imgMan{
-   width: 226px;
+   width: 285px;
    height: 526px;
    margin-right: 9px;
    position: relative;
@@ -100,17 +124,98 @@ input:hover{
  }
 
  #line{
-   border: 3px solid white;
+   /* border: 3px solid white;
+   position: relative;
+transform: rotate(38deg);
+transform-origin: 100% 0%;
+border-right-width: 0px;
+right: 172px;
+width: 890px;
+left: -189px;
+border-left-width: 0px;
+bottom: 65px;
+z-index: -1; */
+
+border: 3px solid white;
+    position: relative;
+    transform: rotate(25deg);
+    transform-origin: 100% 0%;
+    border-right-width: 0px;
+    right: 126px;
+    width: 1400px;
+    /* left: -189px; */
+    border-left-width: 0px;
+    bottom: 8px;
+    z-index: -1;
+
+
+
+   /* border: 3px solid white;
    position: relative;
    transform: rotate(25deg);
    transform-origin: 100% 0%;
     border-right-width: 0px;
     right: 133px;
-    width: 1432px;
+    width: 800px;
     left: -56;
     border-left-width: 0px;
     bottom: 7px;
-    z-index: -1;
+    z-index: -1; */
  }
 
  /*end container body*/
+ @media (min-width:650px) {
+   body{
+     background-color: red;
+   }
+   #line{
+        transform: rotate(calc(25deg)-1);
+         right: 161px;
+         bottom: 24px;
+         width: calc(100% + 161px);
+   }
+   #imgMan{
+     width: 50%;
+   }
+   #imgWoman{
+     width: 50%;
+   }
+   #pMan{
+     margin-top: 15%;
+     margin-left: 10%;
+   }
+   #pWoman{
+     margin-top: 294px;
+   }
+   p{
+     font-size: 22px;
+     font-weight: bold;
+   }
+ }
+@media (max-width:650px) {
+  #line{
+    transform: rotate(44deg);
+    right: 235px;
+    bottom: 24px;
+    width: 870px;
+
+  }
+  #imgMan{
+    width: 50%;
+  }
+  #imgWoman{
+    width: 50%;
+  }
+  #pMan{
+    margin-top: 15%;
+    margin-left: 10%;
+  }
+  #pWoman{
+    margin-top: 294px;
+  }
+  p{
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+}
