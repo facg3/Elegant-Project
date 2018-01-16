@@ -113,13 +113,14 @@ justify-content: center;
   flex-wrap: wrap;
 }
 
+
 .box {
   width: 265px;
-  height: 365px;
+  height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+
 
 }
 .innerbox{
@@ -132,8 +133,8 @@ justify-content: center;
   border: 1px solid #828282;
 }
 .innerbox a img{
-  max-width: 230px;
-  max-height: 230px;
+  max-width: 90%;
+  max-height: 90%;
   border-radius: 10px;
 }
 .box p:nth-child(3) {
