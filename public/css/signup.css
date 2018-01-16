@@ -33,6 +33,7 @@ body {
   position: relative;
   width: 400px;
 }
+
 .h1 {
   color: #752223;
   font-family: Roboto;
@@ -48,6 +49,7 @@ body {
   padding-left: 10px;
   font-size: 17px;
 }
+
 .button {
   height: 45px;
   border-radius: 10px;
@@ -58,21 +60,23 @@ body {
   font-weight: bold;
   font-size: 18px;
 }
+
 .button:hover {
   background-color: #631a1b;
   cursor: pointer;
 }
+
 .a {
   text-decoration: none;
   color: #cf0606;
 }
+
 .h4 {
   margin-top: 25px;
   text-align: center;
 }
+
 .footer {
-  /*position: absolute;
-  bottom: 0;*/
   width: 100%;
   align-self: flex-end;
   display: flex;
@@ -84,12 +88,15 @@ body {
   font-size: 14px;
   color: white;
 }
+
 .checkbox {
   display: flex;
 }
+
 .checkbox input {
   height: 10px;
 }
+
 .divchkOwner input {
   width: 389px;
 }
