@@ -136,7 +136,7 @@ border-left-width: 0px;
 bottom: 65px;
 z-index: -1; */
 
-border: 3px solid white;
+    border: 3px solid white;
     position: relative;
     transform: rotate(25deg);
     transform-origin: 100% 0%;
@@ -165,9 +165,6 @@ border: 3px solid white;
 
  /*end container body*/
  @media (min-width:650px) {
-   body{
-     background-color: red;
-   }
    #line{
         transform: rotate(calc(25deg)-1);
          right: 161px;
