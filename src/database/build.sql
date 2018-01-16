@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS users,shop_owner,cloths,cloths_details,blog,saved CASCADE;
 
 CREATE TABLE IF NOT EXISTS users (
   id serial PRIMARY KEY,
