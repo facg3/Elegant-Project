@@ -11,19 +11,19 @@
     <header class="header">
     </header>
     <div class="container">
-<img src="./imgs/logo.png" alt="">
-<h1>Creat New Account</h1>
-    <form class="" action="/signup" method="post" id='registerForm'>
-      <input type="text" id ='username' placeholder="Username" required>
-      <input type="email" id ='email' placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-      <input type="password" id ='password' placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-      <div class="checkbox"><input type="checkbox" id="chkOwner" onclick="ShowHideDiv(this)"> Are you shop owner?</div>
+<img src="./image/logo.png" alt="">
+<h1 class="h1">Creat New Account</h1>
+    <form class="form" action="/signup" method="post" id='registerForm'>
+      <input class="input" type="text" id ='username' placeholder="Username" required>
+      <input class="input" type="email" id ='email' placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+      <input class="input" type="password" id ='password' placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+      <div class="checkbox"><input  type="checkbox" id="chkOwner" onclick="ShowHideDiv(this)"> Are you shop owner?</div>
       <div id="divchkOwner" class="divchkOwner" style="display: none">
-        <input type="text" id ='shopname' placeholder="Shopname" required>
-        <input type="text" id ='address' placeholder="Address" required>
+        <input class="input" type="text" id ='shopname' placeholder="Shopname" required>
+        <input class="input" type="text" id ='address' placeholder="Address" required>
       </div>
-      <button type="submit" name="button" id="btn">Register</button>
-      <h4>Already have an account? <a href="/">Login</a></h4>
+      <button class="button" type="submit" name="button" id="btn">Register</button>
+      <h4 class="h4">Already have an account? <a class="a" href="/">Login</a></h4>
       <div id="paragraph">
       </div>
     </form></div>
