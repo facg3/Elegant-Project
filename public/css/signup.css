@@ -1,6 +1,4 @@
 body {
-  width: 100%;
-  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -8,14 +6,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1140px;
+  width: 100%;
   align-self: center;
 }
-.bigContainer {
-  display: flex;
-  flex-direction: column;
-}
-header {
+
+.header {
+  width: 100%;
   height: 40px;
   background-color: #752223;
   display: flex;
@@ -66,7 +62,11 @@ h4 {
   margin-top: 25px;
   text-align: center;
 }
-footer {
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  align-self: flex-end;
   display: flex;
   justify-content: center;
   align-items: center;
