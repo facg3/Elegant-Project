@@ -2,6 +2,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -63,8 +71,8 @@ body {
   text-align: center;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
+  /*position: absolute;
+  bottom: 0;*/
   width: 100%;
   align-self: flex-end;
   display: flex;

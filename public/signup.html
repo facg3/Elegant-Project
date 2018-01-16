@@ -8,6 +8,7 @@
 
   </head>
   <body>
+    <div class="main">
     <header class="header">
     </header>
     <div class="container">
@@ -28,13 +29,14 @@
       </div>
     </form></div>
   <footer class="footer">2018 Elegant.com © All Rights Reserved</footer>
+</div>
   </body>
   <script type="text/javascript">
   function ShowHideDiv(chkOwner) {
   var divchkOwner = document.getElementById("divchkOwner");
   var footer = document.querySelector("footer");
   divchkOwner.style.display = chkOwner.checked ? "block" : "none";
-  footer.style.position = chkOwner.checked ? "relative" : "absolute";
+  // footer.style.position = chkOwner.checked ? "relative" : "absolute";
 }
 </script>
   </html>
