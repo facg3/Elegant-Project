@@ -5,21 +5,21 @@ body{
   height: 100vh;
 }
 /* start header */
-header{
+.header{
   height: 40px;
   background-color: #752223;
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
-#headerForm{
+.headerForm{
   display: flex;
   align-items: center;
   align: left;
   margin-right:  10px;
 }
 
-input{
+.input{
   background-color: #742223;
   border: 0;
   color: white;
@@ -28,7 +28,7 @@ input{
   font-size: 15px;
 }
 
-input:hover{
+.input:hover{
   font-size: 17px;
   color: #eae4ac;
   cursor: pointer;
@@ -63,7 +63,7 @@ input:hover{
  }
  /* end side bar */
 /* burger and logo */
-#burgerAndLogo{
+.burgerAndLogo{
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -71,9 +71,9 @@ input:hover{
   margin: 0 auto;
   margin-top: 15px;
 }
-#logo{
-  margin-right: 45%;
+.logo{
   height: 69px;
+  margin: 0 auto;
   width: 140px;
 }
  /* start burgerButton */
@@ -88,54 +88,44 @@ input:hover{
  /* end burder and logo*/
 
  /* start container body */
- p{
+ .pMan, .pWoman{
    font-size: 28px;
-   font-family: Playfair Displa;
+   font-family: 'Playfair Display';
    font-style: normal;
+   font-weight: bold;
+
  }
- #pMan{
+ .pMan{
    margin-top: 97px;
        margin-left: 52px;
  }
- #pWoman{
+ .pWoman{
    margin-top: 12em;
  }
- #container{
+ .container{
    display: flex;
  }
- #imgMan{
+ .imgMan{
    width: 285px;
    height: 526px;
    margin-right: 9px;
    position: relative;
    bottom: 45px;
  }
- #imgWoman{
+ .imgWoman{
    width: 290px;
    height: 523px;
    margin-top: 6px;
    margin-left: 20px;
  }
- #womanStyle{
+ .womanStyle{
    display: flex;
  }
- #manStyle{
+ .manStyle{
    display: flex;
  }
 
- #line{
-   /* border: 3px solid white;
-   position: relative;
-transform: rotate(38deg);
-transform-origin: 100% 0%;
-border-right-width: 0px;
-right: 172px;
-width: 890px;
-left: -189px;
-border-left-width: 0px;
-bottom: 65px;
-z-index: -1; */
-
+ .line{
     border: 3px solid white;
     position: relative;
     transform: rotate(25deg);
@@ -143,76 +133,44 @@ z-index: -1; */
     border-right-width: 0px;
     right: 126px;
     width: 1400px;
-    /* left: -189px; */
     border-left-width: 0px;
     bottom: 8px;
     z-index: -1;
-
-
-
-   /* border: 3px solid white;
-   position: relative;
-   transform: rotate(25deg);
-   transform-origin: 100% 0%;
-    border-right-width: 0px;
-    right: 133px;
-    width: 800px;
-    left: -56;
-    border-left-width: 0px;
-    bottom: 7px;
-    z-index: -1; */
  }
 
- /*end container body*/
- @media (min-width:650px) {
-   #line{
-        transform: rotate(calc(25deg)-1);
-         right: 161px;
-         bottom: 24px;
-         width: calc(100% + 161px);
-   }
-   #imgMan{
-     width: 50%;
-   }
-   #imgWoman{
-     width: 50%;
-   }
-   #pMan{
-     margin-top: 15%;
-     margin-left: 10%;
-   }
-   #pWoman{
-     margin-top: 294px;
-   }
-   p{
-     font-size: 22px;
-     font-weight: bold;
-   }
- }
 @media (max-width:650px) {
-  #line{
+  .line{
     transform: rotate(44deg);
-    right: 235px;
-    bottom: 24px;
-    width: 870px;
-
+    right: 0;
+    bottom: 0;
+    width: 0;
+    display: hidden;
   }
-  #imgMan{
+  .imgMan{
     width: 50%;
   }
-  #imgWoman{
+  .imgWoman{
     width: 50%;
   }
-  #pMan{
-    margin-top: 15%;
-    margin-left: 10%;
+  .pMan{
+    margin-top: 15vh;
+    margin-left: 10vw;
   }
-  #pWoman{
+  .pWoman{
     margin-top: 294px;
   }
-  p{
-    font-size: 22px;
+  .pWoman , .pMan {
     font-weight: bold;
   }
-
+}
+@media (max-width:1200px) {
+  .line{
+    width: 0;
+    right: 0;
+    bottom: 0;
+  }
+  p{
+    font-size: 2.5vw;
+    font-weight: bold;
+  }
 }
