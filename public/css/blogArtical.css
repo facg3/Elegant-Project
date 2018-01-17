@@ -116,6 +116,7 @@ justify-content: center;
 .photoAndText{
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 .insideContainer{
   width: 65%;
@@ -126,12 +127,11 @@ justify-content: center;
 .insideContainer span{
   position: absolute;
   top: 285px;
-  text-align: center;
-  margin-left: 15%;
-  font-size: 28px;
+  font-size: 23px;
   color: white;
   font-family: Roboto;
   font-weight: bold;
+  align-self: center;
 }
 .insideContainer img{
   z-index: -1;
@@ -153,9 +153,6 @@ justify-content: center;
 }
 /* end footer */
 @media only screen and (max-width: 650px) {
-    body {
-        background-color: lightblue;
-    }
     #navbarBlogs{
         font-size: 13px;
     }
@@ -165,11 +162,8 @@ justify-content: center;
     .insideContainer span {
         position: absolute;
         top: 253px;
-        margin: 0 auto;
         font-size: 21px;
         font-weight: bold;
-        display: flex;
-        align-self: center;
         color: black;
         width: 65%;
     }
