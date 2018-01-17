@@ -27,7 +27,7 @@ body {
 
 .h1 {
   color: #752223;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
 }
 
 .input {
@@ -45,7 +45,6 @@ body {
   height: 3.5rem;
   border-radius: 10px;
   border: none;
-  height: 55px;
   background-color: #752223;
   color: white;
   font-weight: bold;
