@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const dbConnection = require('./db_connection.js');
 
-const sql = fs.readFileSync(`${__dirname}/dbBuild.sql`).toString();
+const sql = fs.readFileSync(`${__dirname}/build.sql`).toString();
 
 dbConnection.query(sql, (errDB, result) => {
   if (errDB) {
