@@ -4,7 +4,10 @@
   "description": "The fastest way to be fashionable",
   "main": "test.js",
   "dependencies": {
-    "eslint": "^4.15.0"
+    "env2": "^2.2.0",
+    "eslint": "^4.15.0",
+    "fs": "0.0.1-security",
+    "pg": "^7.4.1"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
