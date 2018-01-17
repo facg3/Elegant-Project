@@ -13,12 +13,13 @@
     "pg": "^7.4.1"
   },
   "devDependencies": {
+    "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
   },
   "scripts": {
-    "start" : "node src/index.js",
-    "watch":"nodemon src/index.js",
+    "start": "node src/index.js",
+    "watch": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
