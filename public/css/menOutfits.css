@@ -6,9 +6,9 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   display: flex;
-  flex-direction: column;
+
   align-self: center;
 }
 
@@ -26,7 +26,7 @@ body {
   flex-wrap: wrap;
 }
 /* start header */
-header {
+.header {
   width: 100%;
   height: 40px;
   background-color: #752223;
@@ -40,7 +40,7 @@ header {
   margin-right: 10px;
 }
 
-input {
+.input {
   background-color: #742223;
   border: 0;
   color: white;
@@ -49,7 +49,7 @@ input {
   font-size: 15px;
 }
 
-input:hover {
+.input:hover {
   font-size: 17px;
   color: #eae4ac;
   cursor: pointer;
@@ -106,7 +106,7 @@ input:hover {
   align-items: center;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,12 +123,13 @@ footer {
 .boxs {
   display: flex;
   margin-top: 25px;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .box {
   display: flex;
+  margin: 0 10px;
   flex-direction: column;
   align-items: center;
   flex: 1;
