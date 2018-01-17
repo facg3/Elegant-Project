@@ -14,11 +14,11 @@ app.engine(
     extname: 'hbs',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
-    defaultLayout: 'main'
-  })
+    defaultLayout: 'main',
+  }),
 );
 
-app.use(express.static(path.join(__dirname, '..','public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('port', process.env.PORT || 4000);
 
 
