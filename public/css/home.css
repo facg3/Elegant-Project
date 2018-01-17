@@ -169,7 +169,7 @@ body{
     right: 0;
     bottom: 0;
   }
-  p{
+  .pWoman,.pMan{
     font-size: 2.5vw;
     font-weight: bold;
   }
