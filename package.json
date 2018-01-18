@@ -4,10 +4,13 @@
   "description": "The fastest way to be fashionable",
   "main": "test.js",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "cookie-parser": "^1.4.3",
     "env2": "^2.2.0",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.1.0",
     "nodemon": "^1.14.11",
     "pg": "^7.4.1"
   },
