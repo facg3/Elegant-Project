@@ -1,0 +1,176 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #F7F7F7;
+  height: 100vh;
+}
+/* start header */
+.header{
+  height: 40px;
+  background-color: #752223;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.headerForm{
+  display: flex;
+  align-items: center;
+  align: left;
+  margin-right:  10px;
+}
+
+.input{
+  background-color: #742223;
+  border: 0;
+  color: white;
+  font-family:  Roboto;
+  font-style: Regular;
+  font-size: 15px;
+}
+
+.input:hover{
+  font-size: 17px;
+  color: #eae4ac;
+  cursor: pointer;
+}
+ /* end header */
+ /* start side bar */
+ .sidebar{
+   width: 165px;
+   height: 100%;
+   background-color: #752223;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   position: fixed;
+   transform:translateX(-200px);
+   transition: transform 0.5s;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.sidebar a:hover {
+    background-color: #521314b3;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 1, 1);
+    border-radius: 5.5px;
+}
+ .active {
+   transform:translateX(0);
+ }
+ /* end side bar */
+/* burger and logo */
+.burgerAndLogo{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.logo{
+  height: 69px;
+  margin: 0 auto;
+  width: 140px;
+}
+ /* start burgerButton */
+ .material-icons{
+   cursor: pointer;
+   font-size: 56px;
+   color: #9E7945;
+   transform:translateX(58px);
+ }
+
+ /* end burgerButton */
+ /* end burder and logo*/
+
+ /* start container body */
+ .pMan, .pWoman{
+   font-size: 28px;
+   font-family: 'Playfair Display';
+   font-style: normal;
+   font-weight: bold;
+
+ }
+ .pMan{
+   margin-top: 97px;
+       margin-left: 52px;
+ }
+ .pWoman{
+   margin-top: 12em;
+ }
+ .container{
+   display: flex;
+ }
+ .imgMan{
+   width: 285px;
+   height: 526px;
+   margin-right: 9px;
+   position: relative;
+   bottom: 45px;
+ }
+ .imgWoman{
+   width: 290px;
+   height: 523px;
+   margin-top: 6px;
+   margin-left: 20px;
+ }
+ .womanStyle{
+   display: flex;
+ }
+ .manStyle{
+   display: flex;
+ }
+
+ .line{
+    border: 3px solid white;
+    position: relative;
+    transform: rotate(25deg);
+    transform-origin: 100% 0%;
+    border-right-width: 0px;
+    right: 126px;
+    width: 1400px;
+    border-left-width: 0px;
+    bottom: 8px;
+    z-index: -1;
+ }
+
+@media (max-width:650px) {
+  .line{
+    transform: rotate(44deg);
+    right: 0;
+    bottom: 0;
+    width: 0;
+    display: hidden;
+  }
+  .imgMan{
+    width: 50%;
+  }
+  .imgWoman{
+    width: 50%;
+  }
+  .pMan{
+    margin-top: 15vh;
+    margin-left: 10vw;
+  }
+  .pWoman{
+    margin-top: 294px;
+  }
+  .pWoman , .pMan {
+    font-weight: bold;
+  }
+}
+@media (max-width:1200px) {
+  .line{
+    width: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .pWoman,.pMan{
+    font-size: 2.5vw;
+    font-weight: bold;
+  }
+}
