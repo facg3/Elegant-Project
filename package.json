@@ -5,7 +5,6 @@
   "main": "test.js",
   "dependencies": {
     "env2": "^2.2.0",
-    "eslint": "^4.15.0",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "fs": "0.0.1-security",
