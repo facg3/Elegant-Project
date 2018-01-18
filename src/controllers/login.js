@@ -1,4 +1,4 @@
-const queries = require('../models/database/queries');
+const queries = require('../models/queries/login');
 const jwt = require('jsonwebtoken');
 
 exports.get = (req, res) => {
