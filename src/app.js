@@ -1,8 +1,9 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
-
-// const routes = require('./controllers/routes');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const routes = require('./controllers/routes');
 
 const app = express();
 
@@ -17,9 +18,10 @@ app.engine(
     defaultLayout: 'main',
   }),
 );
-
+app.use(cookieParser());
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('port', process.env.PORT || 4000);
-
+app.use(routes);
 
 module.exports = app;
