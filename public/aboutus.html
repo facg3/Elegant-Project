@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +10,67 @@
   <link rel="shortcut icon" type="image/x-icon" href="/imgs/icon.ico" />
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-  <body>
-    <header>
-      <form id="headerForm" class="headerForm" action="" method="post">
-        <input type="submit" name="" value="Login">
-        <input type="submit" name="" value="Sign Up">
-      </form>
-    </header>
-      <div class="burgerAndLogo" id="burgerAndLogo">
-        <div></div>
-    <div><img src="./imgs/logo.png" alt="logo" class="logo"></div>
-    <div class="burgerButton">
-        <div class="slice"></div>
-        <div class="slice"></div>
-        <div class="slice"></div>
-      </div>
+
+<body>
+  <header class="header">
+    <form id="headerForm" class="headerForm" action="" method="post">
+      <input class="input" type="submit" name="" value="Login">
+      <input class="input" type="submit" name="" value="Sign Up">
+    </form>
+  </header>
+  <div class="burgerAndLogo" id="burgerAndLogo">
+    <div><img src="./image/logo.png" alt="logo" class="logo"></div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn unactive"onclick="closeNav()">&times;</a>
+      <a href="/home" class="unactive">Home</a>
+      <a href="/aboutus" class="active">About Us</a>
+      <a href="/menfashion" class="unactive">Men Fashion</a>
+      <a href="/womenfashion" class="unactive">Women Fashion</a>
+      <a href="/blog" class="unactive">Blog</a>
+      <a href="/outfitsmen" class="unactive">Outfits Men</a>
+      <a href="/outfitswomen" class="unactive">Outfits Women</a>
+      <a href="/contactus" class="unactive">Contact Us</a>
+      <a href="/logout" class="unactive">Logout</a>
     </div>
+    <div class="burgerButton">
+      <i class="material-icons " id="burgerButton" onclick="openNav()">menu</i>
+    </div>
+  </div>
 
-    <div class="container" id="container">
-      <h1>About Us</h1>
-      <center><div class="parag"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem.</p>
-    </div></center>
+  <div class="container" id="container">
+    <h1 class="h1">About Us</h1>
+    <div class="parag">
+      <p class="p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+        desktop publishing software like Aldus PageMaker including versions of Lorem.</p>
+    </div>
     <center>
-    <div class="row">
-  <div class="column" >
-    <img src="./imgs/walaa.png" alt="walaa">
+      <div class="row">
+        <div class="column">
+          <img src="./imgs/walaa.png" alt="walaa">
+        </div>
+        <div class="column">
+          <img src="./imgs/mahmoud.jpeg" alt="walaa">
+        </div>
+        <div class="column">
+          <img src="./imgs/salam.jpeg" alt="salam">
+        </div>
+    </center>
+    </div>
   </div>
-  <div class="column" >
-    <img src="./imgs/mahmoud.jpeg" alt="walaa">
-  </div>
-  <div class="column" >
-    <img src="./imgs/salam.jpeg" alt="salam">
-  </div>
-</center>
-</div>
-  </div>
-    <div class="line"></div>
-    <footer>2018 Elegant.com © All Rights Reserved</footer>
+  <footer class="footer">2018 Elegant.com © All Rights Reserved</footer>
 
-  </body>
+</body>
+<script type="text/javascript">
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
 </html>
