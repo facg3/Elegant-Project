@@ -6,7 +6,7 @@ var massage = document.getElementById("massage");
 var checkbox = document.getElementById("chkOwner");
 var shopname = document.getElementById("shopname");
 var address = document.getElementById("address");
-
+ 
 form.addEventListener("submit", event => {
   event.preventDefault();
   if (!checkbox.checked) {
