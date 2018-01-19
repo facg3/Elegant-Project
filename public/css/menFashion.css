@@ -159,3 +159,12 @@ body {
 .box p:nth-child(3) {
   color: #752223;
 }
+
+.fa{
+  display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: #752223;
+}
