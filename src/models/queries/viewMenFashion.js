@@ -2,7 +2,7 @@ const dbconnection = require('../database/db_connection');
 
 const viewMenFashion = (cb) => {
   const viewMenFashionSql = {
-    text: 'select * from cloths where gender = \'men\'',
+    text: 'select * from cloths where gender = \'wome\'',
   };
   dbconnection.query(viewMenFashionSql, (dataBaseConnectionError, menFashion) => {
     if (dataBaseConnectionError) return cb(dataBaseConnectionError);
