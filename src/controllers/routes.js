@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 const signup = require('./signup');
 const login = require('./login');
@@ -6,6 +7,9 @@ const men = require('./men');
 const women = require('./women');
 const menOutfits = require('./menOutfits');
 const womenOutfits = require('./womenOutfits');
+
+const women = require('./women');
+
 
 router.get('/signup', signup.get);
 router.post('/signup', signup.post);
@@ -21,4 +25,3 @@ router.get('/login', login.get);
 
 
 module.exports = router;
-  
