@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const routes = require('./controllers/routes');
 
 const app = express();
-
+  
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine(
@@ -16,7 +16,7 @@ app.engine(
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
     defaultLayout: 'main',
-  }),
+  })
 );
 app.use(cookieParser());
 app.use(bodyParser.json());
