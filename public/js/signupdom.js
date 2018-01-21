@@ -6,7 +6,7 @@ var massage = document.getElementById("massage");
 var checkbox = document.getElementById("chkOwner");
 var shopname = document.getElementById("shopname");
 var address = document.getElementById("address");
-  
+
 form.addEventListener("submit", event => {
   event.preventDefault();
   if (!checkbox.checked) {
@@ -30,7 +30,7 @@ function validateUsernameEmailPassword(cb) {
     massage.textContent =
       'please include an "@" in the email address and please match requested format ';
   } else if (!validatePassword(password.value)) {
-    massage.textContent = "Please match requested format password feild";
+      massage.textContent = "The password have to contains at least one capital letter , small letter and number";
   } else {
     var data;
     if (!checkbox.checked) {

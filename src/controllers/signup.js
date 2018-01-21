@@ -1,6 +1,6 @@
 const queries = require("../models/queries/signup.js");
 exports.get = (req, res) => {
-  res.render("signup");
+  res.render("signup", {style:'signup'});
 };
 exports.post = (req, response) => {
   if (!req.body.address) {
@@ -19,5 +19,5 @@ exports.post = (req, response) => {
         response.redirect("/");
       }
     });
-  }  
+  }
 };

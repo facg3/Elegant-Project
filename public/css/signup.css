@@ -98,7 +98,7 @@ body {
 }
 
 .divchkOwner input {
-  width: 389px;
+  width: 100%;
 }
 .massage{
   color: red;
