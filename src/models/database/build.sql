@@ -37,7 +37,7 @@ CREATE TABLE "cloths" (
     "img" varchar NOT NULL,
     "shop_name" varchar(100) NOT NULL,
     "shop_owner_id" serial NOT NULL,
-    "gender" char NOT NULL,
+    "gender" varchar(10) NOT NULL,
     CONSTRAINT cloths_pk PRIMARY KEY ("id")
 ) WITH (
   OIDS=FALSE
@@ -79,8 +79,14 @@ CREATE TABLE "saved" (
   OIDS=FALSE
 );
 
-
-
+CREATE TABLE "outfits" (
+    "id" serial NOT NULL,
+    "img" varchar NOT NULL,
+    "gender" varchar(10) NOT NULL,
+    CONSTRAINT outfits_pk PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
 
 
 ALTER TABLE "cloths" ADD CONSTRAINT "cloths_fk0" FOREIGN KEY ("shop_owner_id") REFERENCES "shop_owner"("id");
@@ -95,10 +101,13 @@ INSERT INTO shop_owner (name, email, password, shop_name, address) VALUES
 ('salam','salam@gmail.com','$2a$08$WsD9bqU5GQdcjk4.eC0JkeCOhdRaVJL5x2gU0OF/vG/pKzeSAExy6','anything', 'anything');
 
 INSERT INTO cloths (title, price, img, shop_name,gender) VALUES
-('cloth',120,'men1.png','anything','m');
+('cloth',120,'men1.png','anything','men');
 
 INSERT INTO cloths_details (cloth_id, img, price) VALUES
 ('1','men1.jpg',120);
+
+INSERT INTO outfits (img, gender) VALUES
+('men1.jpg','men');
 
 INSERT INTO blog (title, article, img, likes) VALUES
 ('anything','anything anything anything anything','women1.png', 0);
