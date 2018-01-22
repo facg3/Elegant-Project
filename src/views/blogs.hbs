@@ -1,68 +1,78 @@
+<div id="navbar" class="navbar">
+  <div class="containernav">
+    {{>nav}}
+    <img src="./image/star.png" class="star" alt="star">
+</div>
+</div>
+
 <div class="bigContainer">
 <div class="container">
+{{#each container}}
+{{#each ../blog}}
   <div class="topContainer">
-      <div class="leftBigContainer">
-          <a href="#">
-            <img src="./image/blogImgs/lipsticks.png" alt="">
+      <div class="{{../name1}}">
+          <a href="/blogs/article/{{id}}" >
+            <img src="./image/blogImgs/{{img}}" alt="img blog 1 ">
           </a>
           <div class="smallContainer">
-            <a href="#">
-              <h3>How to Get Lipstick Out of Clothing in 5 Steps!</h3>
-            </a>
+
+              <h3 onclick="blogArticleId({{id}})">{{title}}</h3>
+
             <div class="likes">
-              2 hours ago | 35 like
+              {{likes}} like
             </div>
             <p>
-                We’ve all been there: accidentally brushing your favorite blouse against your lips after your makeup was done We’ve all been there: accidentally brushing your favorite blouse against your lips after your makeup was done We’ve all been there: accidentally brushing your favorite blouse against your lips after your  your favorite blouse against your lips after your makeup was done
-                <a href="#">Read More ...</a>
+              {{article}}
+              <a href="#">Read More ...</a>
             </p>
           </div>
       </div>
-      <div class="rightSmallContainer">
-        <a href="#">
-          <img src="./image/blogImgs/lipstick.jpeg" alt="">
+      <div class="{{../name2}}">
+        <a href="/blog/article/{{id}}" onclick="blogArticleId({{id}})" >
+          <img src="./image/blogImgs/{{img}}" alt="">
         </a>
         <a href="#">
-          <h4>How to Get Lipstick Out of Clothing in 5 Steps!</h4>
+          <h4>{{title}}</h4>
         </a>
-        <div class="likes">2 hours ago | 35 like</div>
-        <p>We’ve done We’ve all been there makeup was done We’ve all been there: accidentally brushing your favorite blouse against your lips after your favorite blouse against your lips after your  your favorite blouse against your lips after your makeup was done
+        <div class="likes">{{likes}} like</div>
+        <p>
+        {{article}}
           <a href="#">Read More ...</a>
         </p>
       </div>
   </div>
   <div class="bottomContainer">
-    <div class="rightSmallContainer">
+    <div class="{{../name3}}">
       <a href="#">
-        <img src="./image/blogImgs/lipstick.jpeg" alt="">
+        <img src="./image/blogImgs/{{img}}" alt="">
       </a>
       <a href="#">
-        <h4>How to Get Lipstick Out of Clothing in 5 Steps!</h4>
+        <h4>{{title}}</h4>
       </a>
-      <div class="likes">2 hours ago | 35 like</div>
-      <p>We’ve done We’ve all been there makeup was done We’ve all been there: accidentally brushing your favorite blouse against your lips after your favorite blouse against your lips after your  your favorite blouse against your lips after your makeup was done
+      <div class="likes">{{likes}}  like</div>
+      <p>
+      {{article}}
         <a href="#">Read More ...</a>
       </p>
     </div>
-      <div class="leftBigContainer">
+      <div class="{{../name4}}">
           <a href="#">
-            <img src="./image/blogImgs/lipsticks.png" alt="">
+            <img src="./image/blogImgs/{{img}}" alt="">
           </a>
           <div class="smallContainer">
             <a href="#">
-              <h3>How to Get Lipstick Out of Clothing in 5 Steps!</h3>
+              <h3>{{title}}</h3>
             </a>
-            <div class="likes">
-              2 hours ago | 35 like
-            </div>
+            <div class="likes">{{likes}}  like</div>
             <p>
-                We’ve all been there: accidentally brushing your favorite blouse against your lips after your makeup was done We’ve all been there: accidentally brushing your favorite blouse against your lips after your makeup was done We’ve all been there: accidentally brushing your favorite blouse against your lips after your  your favorite blouse against your lips after your makeup was done
-                <a href="#">Read More ...</a>
+            {{article}}
+              <a href="#">Read More ...</a>
             </p>
           </div>
       </div>
     </div>
+  {{/each}}
+  {{/each}}
 </div>
 </div>
-
-    <link rel="stylesheet" href="css/blogs.css">
+<script src="js/functions.js" charset="utf-8"></script>

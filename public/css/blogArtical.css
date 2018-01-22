@@ -120,10 +120,8 @@ justify-content: center;
 .photoAndText{
   display: flex;
   width: 100%;
-<<<<<<< HEAD
-  justify-content: center;
-=======
->>>>>>> bd81005f07d656f572dde315c3324b0305808582
+  /* justify-content: center; */
+
 }
 .insideContainer{
   width: 65%;
@@ -134,20 +132,19 @@ justify-content: center;
 .insideContainer span{
   position: absolute;
   top: 285px;
-<<<<<<< HEAD
+/* <<<<<<< HEAD
   font-size: 23px;
   color: white;
   font-family: Roboto;
   font-weight: bold;
   align-self: center;
-=======
+======= */
   text-align: center;
   margin-left: 15%;
   font-size: 28px;
   color: white;
   font-family: Roboto;
   font-weight: bold;
->>>>>>> bd81005f07d656f572dde315c3324b0305808582
 }
 .insideContainer img{
   z-index: -1;
@@ -166,14 +163,11 @@ justify-content: center;
     font-family: Roboto;
     font-size: 14px;
     color: white;
+    position: absolute;
 }
 /* end footer */
 @media only screen and (max-width: 650px) {
-<<<<<<< HEAD
-=======
-
->>>>>>> bd81005f07d656f572dde315c3324b0305808582
-    #navbarBlogs{
+  #navbarBlogs{
         font-size: 13px;
     }
     .containernav {
@@ -182,16 +176,13 @@ justify-content: center;
     .insideContainer span {
         position: absolute;
         top: 253px;
-<<<<<<< HEAD
-        font-size: 21px;
         font-weight: bold;
-=======
+        font-size: 21px;
         margin: 0 auto;
         font-size: 21px;
         font-weight: bold;
         display: flex;
         align-self: center;
->>>>>>> bd81005f07d656f572dde315c3324b0305808582
         color: black;
         width: 65%;
     }

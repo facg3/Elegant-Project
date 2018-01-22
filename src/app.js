@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const routes = require('./controllers/routes');
 
 const app = express();
-  
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine(
@@ -21,7 +21,7 @@ app.engine(
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 8000);
 app.use(routes);
 
 module.exports = app;
