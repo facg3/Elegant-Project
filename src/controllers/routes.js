@@ -8,20 +8,17 @@ const women = require('./women');
 const menOutfits = require('./menOutfits');
 const womenOutfits = require('./womenOutfits');
 
-const women = require('./women');
-
 
 router.get('/signup', signup.get);
 router.post('/signup', signup.post);
 router.post('/loginuser', login.post);
+router.get('/login', login.get);
 
 router.get('/men-fashion', men.get);
 router.get('/women-fashion', women.get);
 
 router.get('/women-outfits', womenOutfits.get);
-
-router.get('/login', login.get);
-
+router.get('/men-outfits', menOutfits.get);
 
 
 module.exports = router;
