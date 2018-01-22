@@ -27,18 +27,22 @@ align-items: center;
 align: left;
 margin-right: 10px;
 }
-input{
-background-color: #742223;
-border: 0;
-color: white;
-font-family: Roboto;
-font-style: Regular;
-font-size: 15px;
+
+.input {
+  text-decoration: none;
+  margin-left: 7px;
+  background-color: #742223;
+  border: 0;
+  color: white;
+  font-family: Roboto;
+  font-style: Regular;
+  font-size: 15px;
 }
-input:hover{
-font-size: 17px;
-color: #eae4ac;
-cursor: pointer;
+
+.input:hover {
+  font-size: 17px;
+  color: #eae4ac;
+  cursor: pointer;
 }
 /* start navbar */
 .navbar{
