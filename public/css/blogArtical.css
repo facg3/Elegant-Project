@@ -149,6 +149,14 @@ justify-content: center;
 .insideContainer img{
   z-index: -1;
 }
+.fa{
+  display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: #752223;
+}
 /* end body */
 /* start footer */
   footer{

@@ -6,73 +6,24 @@
 </div>
 
 <div class="bigContainer">
-<div class="container">
-{{#each container}}
-{{#each ../blog}}
-  <div class="topContainer">
-      <div class="{{../name1}}">
-          <a href="/blogs/article/{{id}}" >
-            <img src="./image/blogImgs/{{img}}" alt="img blog 1 ">
+  {{#each blog}}
+    <div class="rowContainer" id="nth{{mod}}">
+      <a href="/blogs/article/{{id}}" >
+        <img src="./image/blogImgs/{{img}}" alt="img blog {{id}} ">
+      </a>
+      <div class="smallContainer">
+          <a href="/blogs/article/{{id}}">
+            <h2 >{{title}}</h2>
           </a>
-          <div class="smallContainer">
-              <a href="/blogs/article/{{id}}">
-                <h3 >{{title}}</h3>
-              </a>
-            <div class="likes">
-              {{likes}} like
-            </div>
-            <p>
-              {{article}}
-              <a href="/blogs/article/{{id}}">Read More ...</a>
-            </p>
-          </div>
-      </div>
-      <div class="{{../name2}}">
-        <a href="/blogs/article/{{id}}" >
-          <img src="./image/blogImgs/{{img}}" alt="">
-        </a>
-        <a href="/blogs/article/{{id}}">
-          <h4>{{title}}</h4>
-        </a>
-        <div class="likes">{{likes}} like</div>
+        <div class="likes">
+          {{likes}} like
+        </div>
         <p>
-        {{article}}
-          <a href="/blogs/article/{{id}}">Read More ...</a>
+          {{article}}
+          <a href="/blogs/article/{{id}}" class="readMore">Read More ...</a>
         </p>
       </div>
-  </div>
-  <div class="bottomContainer">
-    <div class="{{../name3}}">
-      <a href="/blogs/article/{{id}}">
-        <img src="./image/blogImgs/{{img}}" alt="">
-      </a>
-      <a href="/blogs/article/{{id}}">
-        <h4>{{title}}</h4>
-      </a>
-      <div class="likes">{{likes}}  like</div>
-      <p>
-      {{article}}
-        <a href="/blogs/article/{{id}}">Read More ...</a>
-      </p>
-    </div>
-      <div class="{{../name4}}">
-          <a href="/blogs/article/{{id}}">
-            <img src="./image/blogImgs/{{img}}" alt="">
-          </a>
-          <div class="smallContainer">
-            <a href="/blogs/article/{{id}}">
-              <h3>{{title}}</h3>
-            </a>
-            <div class="likes">{{likes}}  like</div>
-            <p>
-            {{article}}
-              <a href="/blogs/article/{{id}}">Read More ...</a>
-            </p>
-          </div>
-      </div>
     </div>
   {{/each}}
-  {{/each}}
-</div>
 </div>
 <script src="js/functions.js" charset="utf-8"></script>

@@ -27,3 +27,9 @@ function blogArticleId(id){
     if(err) console.log(err);
 })
 }
+
+function btnClick() {
+  const elem = document.querySelector('i');
+  elem.classList.remove('fa-heart-o');
+  elem.classList.add('fa-heart');
+}
