@@ -1,12 +1,9 @@
 const express = require('express');
-
 const router = express.Router();
 const signup = require('./signup');
 const login = require('./login');
-
 const aboutus = require('./aboutus');
 const contactus = require('./contactus');
-
 const blogArtical = require('./blogArtical');
 const blogs = require('./blogs');
 const logout = require('./logout');
@@ -23,6 +20,7 @@ router.post('/loginuser', login.post);
 router.get('/aboutus', aboutus.get);
 router.get('/contactus', contactus.get);
 router.get('/blogs/article/:id', blogArtical.get);
+router.post('/blogs/article/:id', blogArtical.post);
 router.get('/blogs', blogs.get);
 router.get('/logout', logout.get);
 router.get('/login', login.get);

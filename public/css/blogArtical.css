@@ -157,6 +157,9 @@ justify-content: center;
     -webkit-font-smoothing: antialiased;
     color: #752223;
 }
+.fa:hover{
+  cursor: pointer;
+}
 /* end body */
 /* start footer */
   footer{

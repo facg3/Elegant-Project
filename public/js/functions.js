@@ -28,8 +28,17 @@ function blogArticleId(id){
 })
 }
 
-function btnClick() {
+function btnClickLike(blogId) {
   const elem = document.querySelector('i');
   elem.classList.remove('fa-heart-o');
   elem.classList.add('fa-heart');
+  fetchFunction(`/blogs/article/${blogId}`,null,(err,res)=>{
+    if(err)console.log(err);
+    else {
+        if(res.status === 200 ){
+          alert('it likes you ^_^ cool')
+          location.reload();
+      }
+    }
+  })
 }

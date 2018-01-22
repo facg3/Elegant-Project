@@ -11,5 +11,18 @@ exports.get=(req,res)=>{
         });
     }
   });
+}
 
+exports.post = (req,res)=>{
+  const blogId = req.params.id;
+  view.likes(blogId,(errInLikeBlog,result) =>{
+    if (errInLikeBlog) {
+      res.status(400).send();
+    }
+    else {
+      if(result){
+        res.status(200).send();
+      }
+    }
+  })
 }

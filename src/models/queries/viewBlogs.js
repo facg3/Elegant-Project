@@ -23,5 +23,19 @@ const viewBlog = (blogId,cb) =>{
 
 }
 
+const likes = (blogId,cb) =>{
+  const sql = {
+    text : "UPDATE blog SET likes = likes + 1 WHERE id =$1",
+    values : [blogId]
+  };
+  dbconnection.query(sql,(dataBaseConnectionError) =>{
+    if (dataBaseConnectionError) return cb(dataBaseConnectionError);
+    else {
+      cb(null,true);
+    }
+  })
 
-module.exports = {viewAllBlogs,viewBlog};
+}
+
+
+module.exports = {viewAllBlogs,viewBlog,likes};
