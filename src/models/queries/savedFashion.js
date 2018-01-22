@@ -26,4 +26,16 @@ const saved = (userId, clothId, cb) => {
     return cb(null, successSaved);
   });
 };
-module.exports = { savedFashion, saved };
+
+const unsaved = (userId, clothId, cb) => {
+  const unsavedSql = {
+    text: 'DELETE FROM saved WHERE cloth_id =$1 and user_id=$2',
+    values: [clothId, userId],
+  };
+  dbconnection.query(unsavedSql, (dataBaseConnectionError, successUnsaved) => {
+    if (dataBaseConnectionError) return cb(dataBaseConnectionError);
+    return cb(null, successUnsaved);
+  });
+};
+
+module.exports = { savedFashion, saved, unsaved };
