@@ -67,30 +67,33 @@ body{
 .active {
    transform:translateX(0);
  }
-
- .submenu1 {
+.manMenu, .womanMenu {
+  position: relative;
+  cursor: pointer;
+}
+ .submenu1 , .submenu2{
    display: none;
    margin-left: 165px;
+   position: absolute;
+   top: 0;
+   background: #742223;
+   padding: 5px;
+   left: 165px;
  }
-.manMenu:hover .submenu1{
-    background-color: #742223 ;
+.manMenu:hover .submenu1, .womanMenu:hover .submenu2{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    margin-bottom: 0;
-    bottom: 400.9px;
-    width: 150px;
-    left: -1px;
 }
-.submenu1 a:hover{
+.submenu1 a:hover , .submenu2 a:hover{
   transition: transform 0.5s;
   background-color: #5c1718;
 }
 .manWord{
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
-
+/*
 .submenu2 {
   display: none;
   margin-left: 165px;
@@ -106,14 +109,11 @@ body{
    left: -1px;
 
 }
-.submenu2 a:hover{
- background-color: #5c1718;
 
-}
 .womanWord{
  color: white;
  text-decoration: none;
-}
+} */
  /* end side bar */
 /* burger and logo */
 .burgerAndLogo{
