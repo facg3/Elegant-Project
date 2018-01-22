@@ -26,7 +26,7 @@
   </div>
   <p>{{title}}</p>
 
-  <p class="info">{{price}} NIS <a href="#"><i class="fa fa-heart-o" onclick="btnClick()"></i></a></p>
+  <p class="info">{{price}} NIS <a><i id="{{id}}" class="fa fa-heart-o" onclick="btnClick({{id}})"></i></a></p>
 </div>
   {{/each}}
 </div>
@@ -34,3 +34,4 @@
 </div>
 
 <script src="js/menFashion.js"></script>
+<script src="js/functions.js"></script>

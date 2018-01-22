@@ -25,11 +25,12 @@
     <a class="a" href="#"><img src="./image/women/{{img}}" alt="fashion"></a>
   </div>
   <p>{{title}}</p>
-  <p class="info">{{price}} NIS <a href="#"><i class="fa fa-heart-o" onclick="btnClick()"></i></a></p>
+  <p class="info">{{price}} NIS <a><i id="{{id}}" class="fa fa-heart-o" onclick="btnClick({{id}})"></i></a></p>
+
 </div>
   {{/each}}
 </div>
 </div>
 </div>
 
-<script src="js/womenFashion.js"></script>
+<script src="js/functions.js"></script>
