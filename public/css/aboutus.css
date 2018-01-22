@@ -19,6 +19,8 @@ body {
 }
 
 .input {
+  text-decoration: none;
+  margin-left: 7px;
   background-color: #742223;
   border: 0;
   color: white;

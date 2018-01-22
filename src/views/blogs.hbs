@@ -15,58 +15,58 @@
             <img src="./image/blogImgs/{{img}}" alt="img blog 1 ">
           </a>
           <div class="smallContainer">
-
-              <h3 onclick="blogArticleId({{id}})">{{title}}</h3>
-
+              <a href="/blogs/article/{{id}}">
+                <h3 >{{title}}</h3>
+              </a>
             <div class="likes">
               {{likes}} like
             </div>
             <p>
               {{article}}
-              <a href="#">Read More ...</a>
+              <a href="/blogs/article/{{id}}">Read More ...</a>
             </p>
           </div>
       </div>
       <div class="{{../name2}}">
-        <a href="/blog/article/{{id}}" onclick="blogArticleId({{id}})" >
+        <a href="/blogs/article/{{id}}" >
           <img src="./image/blogImgs/{{img}}" alt="">
         </a>
-        <a href="#">
+        <a href="/blogs/article/{{id}}">
           <h4>{{title}}</h4>
         </a>
         <div class="likes">{{likes}} like</div>
         <p>
         {{article}}
-          <a href="#">Read More ...</a>
+          <a href="/blogs/article/{{id}}">Read More ...</a>
         </p>
       </div>
   </div>
   <div class="bottomContainer">
     <div class="{{../name3}}">
-      <a href="#">
+      <a href="/blogs/article/{{id}}">
         <img src="./image/blogImgs/{{img}}" alt="">
       </a>
-      <a href="#">
+      <a href="/blogs/article/{{id}}">
         <h4>{{title}}</h4>
       </a>
       <div class="likes">{{likes}}  like</div>
       <p>
       {{article}}
-        <a href="#">Read More ...</a>
+        <a href="/blogs/article/{{id}}">Read More ...</a>
       </p>
     </div>
       <div class="{{../name4}}">
-          <a href="#">
+          <a href="/blogs/article/{{id}}">
             <img src="./image/blogImgs/{{img}}" alt="">
           </a>
           <div class="smallContainer">
-            <a href="#">
+            <a href="/blogs/article/{{id}}">
               <h3>{{title}}</h3>
             </a>
             <div class="likes">{{likes}}  like</div>
             <p>
             {{article}}
-              <a href="#">Read More ...</a>
+              <a href="/blogs/article/{{id}}">Read More ...</a>
             </p>
           </div>
       </div>
