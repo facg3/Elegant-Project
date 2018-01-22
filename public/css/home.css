@@ -73,12 +73,12 @@ body{
 }
  .submenu1 , .submenu2{
    display: none;
-   margin-left: 165px;
    position: absolute;
    top: 0;
    background: #742223;
    padding: 5px;
    left: 165px;
+   width: 160px;
  }
 .manMenu:hover .submenu1, .womanMenu:hover .submenu2{
     display: flex;
@@ -88,7 +88,7 @@ body{
   transition: transform 0.5s;
   background-color: #5c1718;
 }
-.manWord{
+.manWord , .womanWord{
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -159,14 +159,12 @@ body{
    display: flex;
  }
  .imgMan{
-   width: 285px;
    height: 526px;
    margin-right: 9px;
    position: relative;
    bottom: 45px;
  }
  .imgWoman{
-   width: 290px;
    height: 523px;
    margin-top: 6px;
    margin-left: 20px;
