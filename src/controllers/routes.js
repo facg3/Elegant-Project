@@ -20,11 +20,9 @@ const womenOutfits = require('./womenOutfits');
 router.get('/signup', signup.get);
 router.post('/signup', signup.post);
 router.post('/loginuser', login.post);
-
 router.get('/aboutus', aboutus.get);
 router.get('/contactus', contactus.get);
-
-router.get('/blogArtical', blogArtical.get);
+router.get('/blogs/article/:id', blogArtical.get);
 router.get('/blogs', blogs.get);
 router.get('/logout', logout.get);
 router.get('/login', login.get);
