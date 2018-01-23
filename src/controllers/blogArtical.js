@@ -1,30 +1,15 @@
-const jwt = require('jsonwebtoken');
+const view = require('../models/queries/viewBlogs.js');
 
-exports.get = (req, res) => {
-  const cookie = req.cookies.accessToken;
-  if (cookie) {
-    const verifyCookie = jwt.verify(cookie, process.env.SECRET_COOKIE);
-    if (verifyCookie) {
-      res.render('blogArtical', {
-        activePage: {
-          login: true,
-        },
-        login: true,
-      });
-    } else {
-      res.render('blogArtical', {
-        activePage: {
-          login: true,
-        },
-        login: false,
-      });
+
+exports.get=(req,res)=>{
+  const id = req.params.id;
+  view.viewBlog(id,(errInOneBlog,blogdata) =>{
+    if(errInOneBlog) response.status(404).send();
+    else {
+      return res.render('blogArtical' , {
+          layout: 'fashion', blogdata , style: 'blogArtical', title: 'blog Articl',
+        });
     }
-  } else {
-    res.render('blogArtical', {
-      activePage: {
-        login: true,
-      },
-      login: false,
-    });
-  }
-};
+  });
+
+}
