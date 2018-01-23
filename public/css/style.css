@@ -153,8 +153,7 @@ body {
 .innerbox a img {
   display: flex;
   align-self: center;
-  max-width: 90%;
-  max-height: 90%;
+  height: 240px;
   border-radius: 10px;
 }
 
