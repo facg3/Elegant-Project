@@ -35,6 +35,19 @@ body{
 }
  /* end header */
  /* start side bar */
+ .mainnav li{
+   list-style: none;
+   margin-left: 0;
+   width: 165px;
+   margin-bottom: 10px;
+   font-size: 24px;
+   margin-left: -40px;
+ }
+ .mainnav li:hover{
+   background-color: #521314b3;
+   transition: background-color 0.5s cubic-bezier(0.4, 0, 1, 1);
+   border-radius: 5.5px;
+ }
  .sidebar{
    width: 165px;
    height: 100%;
@@ -50,17 +63,57 @@ body{
 .sidebar a {
   color: white;
   text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 24px;
 }
-.sidebar a:hover {
-    background-color: #521314b3;
-    transition: background-color 0.5s cubic-bezier(0.4, 0, 1, 1);
-    border-radius: 5.5px;
-}
- .active {
+.active {
    transform:translateX(0);
  }
+.manMenu, .womanMenu {
+  position: relative;
+  cursor: pointer;
+}
+ .submenu1 , .submenu2{
+   display: none;
+   position: absolute;
+   top: 0;
+   background: #742223;
+   padding: 5px;
+   left: 165px;
+   width: 160px;
+ }
+.manMenu:hover .submenu1, .womanMenu:hover .submenu2{
+    display: flex;
+    flex-direction: column;
+}
+.submenu1 a:hover , .submenu2 a:hover{
+  transition: transform 0.5s;
+  background-color: #5c1718;
+}
+.manWord , .womanWord{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*
+.submenu2 {
+  display: none;
+  margin-left: 165px;
+}
+.womanMenu:hover .submenu2{
+   background-color: #742223 ;
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   margin-bottom: 0;
+   bottom: 362.9px;
+   width: 150px;
+   left: -1px;
+
+}
+
+.womanWord{
+ color: white;
+ text-decoration: none;
+} */
  /* end side bar */
 /* burger and logo */
 .burgerAndLogo{
@@ -79,9 +132,9 @@ body{
  /* start burgerButton */
  .material-icons{
    cursor: pointer;
-   font-size: 56px;
    color: #9E7945;
    transform:translateX(58px);
+   font-size: 56px !important;
  }
 
  /* end burgerButton */
@@ -106,14 +159,12 @@ body{
    display: flex;
  }
  .imgMan{
-   width: 285px;
    height: 526px;
    margin-right: 9px;
    position: relative;
    bottom: 45px;
  }
  .imgWoman{
-   width: 290px;
    height: 523px;
    margin-top: 6px;
    margin-left: 20px;
@@ -137,7 +188,13 @@ body{
     bottom: 8px;
     z-index: -1;
  }
-
+.divHome{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 24px;
+    background-color: #521314b3;
+    border-radius: 5.5px;
+}
 @media (max-width:650px) {
   .line{
     transform: rotate(44deg);

@@ -1,19 +1,21 @@
 function fetchFunction(url, data, cb) {
   fetch(url, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: data,
-    credentials: 'include',
-  })
-    .then((response) => {
-      cb(null, response);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+
+   method: 'POST',
+   headers: {
+     'Accept': 'application/json',
+     'Content-Type': 'application/json'
+   },
+   body: data,
+   credentials: 'include'
+ })
+ .then((response) => {
+    cb(null,response);
+ })
+ .catch( (err) => {
+   console.log(err);
+ });
+
 }
 
 function burgerAction() {
@@ -143,4 +145,16 @@ function savedpage(id) {
       }
     },
   );
+}
+
+function blogArticleId(id){
+  fetchFunction('/blogArtical', JSON.stringify({blogId : id}), (err,res)=>{
+    if(err) console.log(err);
+})
+}
+
+function btnClick() {
+  const elem = document.querySelector('i');
+  elem.classList.remove('fa-heart-o');
+  elem.classList.add('fa-heart');
 }
