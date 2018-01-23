@@ -1,5 +1,4 @@
 const express = require('express');
-
 const router = express.Router();
 const signup = require('./signup');
 const login = require('./login');
@@ -22,6 +21,7 @@ router.post('/loginuser', login.post);
 router.get('/aboutus', aboutus.get);
 router.get('/contactus', contactus.get);
 router.get('/blogs/article/:id', blogArtical.get);
+router.post('/blogs/article/:id', blogArtical.post);
 router.get('/blogs', blogs.get);
 router.get('/logout', logout.get);
 router.get('/login', login.get);
