@@ -29,6 +29,14 @@ exports.get = (req, res) => {
           });
         });
       }
+    } else {
+      return res.render('men', {
+        layout: 'fashion',
+        menFashion,
+        style: 'style',
+        title: 'Men Fashion',
+      });
     }
+    return null;
   });
 };

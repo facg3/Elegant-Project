@@ -24,6 +24,13 @@
   <div class="innerbox">
     <a class="a" href="#"><img src="./image/{{gender}}/{{img}}" alt="fashion"></a>
   </div>
+  <p class="info">{{price}} NIS <a><i id="{{id}}" class="fa fa-heart" onclick="savedpage({{id}})"></i></a></p>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span id="close" class="close">&times;</span>
+      <p id="text"></p>
+    </div>
+  </div>
   <p>{{title}}</p>
 </div>
   {{/each}}
