@@ -3,10 +3,8 @@ const express = require('express');
 const router = express.Router();
 const signup = require('./signup');
 const login = require('./login');
-
 const aboutus = require('./aboutus');
 const contactus = require('./contactus');
-
 const blogArtical = require('./blogArtical');
 const blogs = require('./blogs');
 const logout = require('./logout');
