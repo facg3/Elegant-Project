@@ -25,15 +25,3 @@ exports.post = (req, res) => {
     }
   });
 };
-//
-// exports.getLikes = (req, res) => {
-//   const blogId = req.params.id;
-//   console.log("blog id is here ", req.body);
-//   view.viewLikes(blogId, (errInCountLikes, numberlikes) => {
-//     if (errInCountLikes) {
-//       res.status(400).send();
-//     } else {
-//       res.send(numberlikes);
-//     }
-//   });
-// };
