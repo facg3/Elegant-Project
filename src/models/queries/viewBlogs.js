@@ -31,10 +31,18 @@ const likes = (blogId,cb) =>{
   dbconnection.query(sql,(dataBaseConnectionError) =>{
     if (dataBaseConnectionError) return cb(dataBaseConnectionError);
     else {
-      cb(null,true);
+      const sql2 = {
+        text : "SELECT likes FROM blog WHERE id =$1",
+        values : [blogId]
+      };
+      dbconnection.query(sql2,(dataBaseConnectionError2, numberlikes) =>{
+        if (dataBaseConnectionError2) return cb(dataBaseConnectionError2);
+        else {
+          cb(null,numberlikes.rows);
+        }
+      })
     }
   })
-
 }
 
 

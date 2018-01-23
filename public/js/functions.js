@@ -8,11 +8,14 @@ function fetchFunction(url,data,cb) {
    body: data,
    credentials: 'include'
  })
+ .then((response) =>{
+      return response.json();
+ })
  .then((response) => {
     cb(null,response);
  })
  .catch( (err) => {
-   console.log(err);
+   cb(err)
  });
 }
 
@@ -23,7 +26,7 @@ function burgerAction() {
 }
 
 function blogArticleId(id){
-  fetchFunction('/blogArtical', JSON.stringify({blogId : id}), (err,res)=>{
+  fetchFunction('/blogArtical',JSON.stringify({blogId : id}), (err,res)=>{
     if(err) console.log(err);
 })
 }
@@ -35,10 +38,10 @@ function btnClickLike(blogId) {
   fetchFunction(`/blogs/article/${blogId}`,null,(err,res)=>{
     if(err)console.log(err);
     else {
-        if(res.status === 200 ){
-          alert('it likes you ^_^ cool')
-          location.reload();
+      console.log(res[0].likes);
+      const likespan = document.getElementById('likespan');
+      console.log(likespan);
+      likespan.textContent = res[0].likes;
       }
-    }
-  })
+    })
 }

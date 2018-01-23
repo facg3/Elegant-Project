@@ -20,6 +20,7 @@ router.post('/loginuser', login.post);
 router.get('/aboutus', aboutus.get);
 router.get('/contactus', contactus.get);
 router.get('/blogs/article/:id', blogArtical.get);
+// router.get('/numberlike',blogArtical.getLikes);
 router.post('/blogs/article/:id', blogArtical.post);
 router.get('/blogs', blogs.get);
 router.get('/logout', logout.get);

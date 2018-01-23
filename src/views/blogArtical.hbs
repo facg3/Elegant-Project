@@ -6,13 +6,13 @@
 </div>
 
 {{#each blogdata}}
-<div class="container" id="container">
+<div class="container" id="container" onload="showLikes({{id}})">
   <div class="insideContainer">
     <div class="photoAndText">
       <span>{{title}}</span>
       <img src="/image/blogImgs/{{img}}" alt="">
     </div>
-    <p>{{likes}} : likes <i class="fa fa-heart-o" onclick="btnClickLike({{id}})"></i> </p>
+    <p> <span id="likespan">{{likes}}</span> : likes <i class="fa fa-heart-o" onclick="btnClickLike({{id}})"></i> </p>
     <p>
     {{article}}
     </p>
@@ -21,3 +21,4 @@
 {{/each}}
 
 <script src="/js/functions.js" charset="utf-8"></script>
+<script src="/js/blogArtical.js" charset="utf-8"></script>
