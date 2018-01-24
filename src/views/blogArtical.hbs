@@ -13,22 +13,23 @@
 <div id="navbar" class="navbar">
   <div class="containernav">
     {{>nav}}
-    <img src="./image/star.png" class="star" alt="star">
-</div>
-</div>
-<div class="container">
-<div class="boxs">
-  {{#each menOutfits}}
-<div class="box">
-  <div class="innerbox">
-    <a class="a" href="#"><img src="./image/menOutfits/{{img}}" alt="fashion"></a>
-  </div>
-  <p>{{title}}</p>
-      <p class="info"><a><i id="{{id}}" class="fa fa-heart-o" onclick="btnClickOutfits({{id}})"></i></a></p>
-</div>
-  {{/each}}
-</div>
+    <img src="/image/star.png" class="star" alt="star">
 </div>
 </div>
 
-<script src="js/functions.js"></script>
+{{#each blogdata}}
+<div class="container" id="container">
+  <div class="insideContainer">
+    <div class="photoAndText">
+      <span>{{title}}</span>
+      <img src="/image/blogImgs/{{img}}" alt="">
+    </div>
+    <p>{{likes}} : likes <i class="fa fa-heart-o" onclick="btnClick()"></i> </p>
+    <p>
+    {{article}}
+    </p>
+  </div>
+</div>
+{{/each}}
+
+<script src="/js/functions.js" charset="utf-8"></script>

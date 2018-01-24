@@ -19,6 +19,7 @@ exports.get = (req, res) => {
           savedfashion,
           style: 'style',
           title: 'saved fashion',
+          login: true,
         });
       });
     }

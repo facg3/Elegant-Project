@@ -26,6 +26,7 @@ exports.get = (req, res) => {
             menFashion,
             style: 'style',
             title: 'Men Fashion',
+            login: true,
           });
         });
       }
@@ -35,6 +36,7 @@ exports.get = (req, res) => {
         menFashion,
         style: 'style',
         title: 'Men Fashion',
+        login: false,
       });
     }
     return null;

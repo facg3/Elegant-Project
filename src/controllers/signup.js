@@ -1,6 +1,7 @@
-const queries = require("../models/queries/signup.js");
+const queries = require('../models/queries/signup.js');
+
 exports.get = (req, res) => {
-  res.render("signup", {style:'signup'});
+  res.render('signup', { layout: false });
 };
 exports.post = (req, response) => {
   if (!req.body.address) {
@@ -8,7 +9,8 @@ exports.post = (req, response) => {
       if (errRegister) {
         response.status(401).send();
       } else {
-        response.redirect("/");
+        console.log(result);
+        response.redirect('/');
       }
     });
   } else {
@@ -16,7 +18,7 @@ exports.post = (req, response) => {
       if (err) {
         response.status(401).send({ error: err });
       } else {
-        response.redirect("/");
+        response.redirect('/');
       }
     });
   }

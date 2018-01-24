@@ -1,0 +1,41 @@
+<header class="header">
+  <form id="headerForm" class="headerForm" action="" method="post">
+    {{#if login}}
+    <a class="input" href="/saved-fashion">Saved</a>
+    <a class="input" href="/logout">logout</a>
+    {{else}}
+    <a class="input" href="/login">Login</a>
+    <a class="input" href="/signup">Sign Up</a>
+    {{/if}}
+
+  </form>
+</header>
+<div id="navbar" class="navbar">
+  <div class="containernav">
+    {{>nav}}
+    <img src="./image/star.png" class="star" alt="star">
+</div>
+</div>
+
+<div class="bigContainer">
+  {{#each blog}}
+    <div class="rowContainer" id="nth{{mod}}">
+      <a href="/blogs/article/{{id}}" >
+        <img src="./image/blogImgs/{{img}}" alt="img blog {{id}} ">
+      </a>
+      <div class="smallContainer">
+          <a href="/blogs/article/{{id}}">
+            <h2 >{{title}}</h2>
+          </a>
+        <div class="likes">
+          {{likes}} like
+        </div>
+        <p>
+          {{article}}
+          <a href="/blogs/article/{{id}}" class="readMore">Read More ...</a>
+        </p>
+      </div>
+    </div>
+  {{/each}}
+</div>
+<script src="js/functions.js" charset="utf-8"></script>

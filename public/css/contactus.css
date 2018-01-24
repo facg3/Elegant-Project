@@ -32,82 +32,85 @@ body {
   color: #eae4ac;
   cursor: pointer;
 }
+
+.input1 {
+  text-decoration: none;
+  margin-left: 7px;
+  background-color: #742223;
+  border: 0;
+  color: white;
+  font-family: Roboto;
+  font-style: Regular;
+  font-size: 15px;
+}
+
+.input1:hover {
+  font-size: 17px;
+  color: #eae4ac;
+  cursor: pointer;
+}
 /* end header */
 /* burger and logo */
-.logo {
-  height: 69px;
-  width: 140px;
-}
-
-/*side nav*/
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #752223;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  font-size: 25px;
-  display: block;
-  transition: 0.3s;
-}
-.active {
-  text-decoration: underline;
-  color: #4f1515;
-}
-.unactive {
-  text-decoration: none;
-  color: white;
-}
-
-.sidenav a:hover {
-  color: #4f1515;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-/*end side nav*/
-/* start burgerButton */
-.burgerButton {
+/* start navbar */
+.navbar {
   display: flex;
-  text-align: ;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 70px;
+  background-color: #fafafa;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
 }
 
-.burgerAndLogo {
-  display: flex;
-  flex-direction: row-reverse;
+.navigationItems {
   justify-content: center;
-  justify-content: space-around;
-  margin: 0 auto;
-  margin-top: 15px;
 }
+.navigationItems ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0px;
+}
+.navigationItems a {
+  font-family: Roboto;
+  text-decoration: none;
+  color: #752223;
+  display: block;
+  padding: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.navigationItems a:hover {
+  text-decoration: underline;
+}
+.navbar .logo {
+  width: 100px;
+  height: 50px;
+}
+.navbar .star {
+  width: 30px;
+}
+.navImg {
+  align-items: center;
+}
+/* end navbar */
 
 .h1 {
   color: #752223;
   font-family: Roboto;
 }
-.center {
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   margin-bottom: 50px;
 }
 .container {
   display: flex;
   flex-direction: column;
   width: 746px;
+  text-align: center;
 }
 .input {
   margin-bottom: 10px;

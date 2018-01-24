@@ -25,6 +25,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 /* start header */
 .header {
   width: 100%;
@@ -41,6 +42,8 @@ body {
 }
 
 .input {
+  text-decoration: none;
+  margin-left: 7px;
   background-color: #742223;
   border: 0;
   color: white;
@@ -54,6 +57,7 @@ body {
   color: #eae4ac;
   cursor: pointer;
 }
+
 /* end header */
 
 .navbar {
@@ -150,8 +154,7 @@ body {
 .innerbox a img {
   display: flex;
   align-self: center;
-  max-width: 90%;
-  max-height: 90%;
+  height: 250px;
   border-radius: 10px;
 }
 

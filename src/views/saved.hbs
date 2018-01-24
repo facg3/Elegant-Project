@@ -1,19 +1,18 @@
+<header class="header">
+  <form id="headerForm" class="headerForm" action="" method="post">
+    {{#if login}}
+    <a class="input" href="/logout">Logout</a>
+    {{else}}
+    <a class="input" href="/login">Login</a>
+    <a class="input" href="/signup">Sign Up</a>
+    {{/if}}
+
+  </form>
+</header>
+
 <div id="navbar" class="navbar">
   <div class="containernav">
-  <div class="navImg">
-    <img src="./image/logo.png" class="logo" alt="star">
-    </div>
-    <div id="navigationItems" class="navigationItems">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Outfits</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact us</a></li>
-      </ul>
-    </div>
+    {{>nav}}
     <img src="./image/star.png" class="star" alt="star">
 </div>
 </div>

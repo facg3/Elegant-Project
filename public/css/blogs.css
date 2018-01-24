@@ -1,125 +1,183 @@
-body{
-margin: 0px;
-padding: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 /* start body */
-.bigContainer{
-    margin-right: 0;
-    display: flex;
-    justify-content: center;
+.rowContainer img {
+  opacity: 0.5;
 }
-.arrow{
-  margin: 5px;
+.rowContainer img:hover {
+  opacity: 1;
+  transition: ease-out 0.3s;
 }
-.container{
+.bigContainer {
+  display: flex;
   width: 88%;
-  align-self: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
-.container .navbarBlogs a{
-  color: black;
+.rowContainer img {
+  width: 100%;
+}
+.rowContainer a {
   text-decoration: none;
 }
-.container .navbarBlogs a:hover{
-  color: #B50B0B;
+h2 {
+  color: black;
+  margin: 3px 0;
 }
-.topContainer{
+.readMore {
+  color: #742223;
+}
+.readMore:hover {
+  font-size: 18px;
+}
+.bigContainer > .container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.navbarBlogs{
-      align-items: center;
-      height: 70px;
-      font-size: 22px;
-      align-content: center;
-      display: flex;
-      margin-left: 20px;
-}
-/* start left big container */
-.leftBigContainer{
+.rowContainer,
+#nth0 {
   width: 67%;
+  margin: 0 0.3%;
 }
-.leftBigContainer a img{
-  width: 100%;
-}
-.leftBigContainer a img:hover{
-  opacity: 0.5;
-  transition: .5s ease;
-}
-.leftBigContainer a h3{
-  margin:10px 0px 5px 0px;
-  color: black;
-}
-.leftBigContainer a:hover{
-  text-decoration: underline;
-}
-.leftBigContainer a {
-  text-decoration: none;
-}
-.smallContainer{
-  margin-left: 50px;
-}
-.leftBigContainer p{
-  font-size: 14px;
-  color: #828282
-}
-.leftBigContainer p a{
-  color : #B50B0B;
-}
-.leftBigContainer p a:hover{
-  font-size: 15px;
-}
-.likes{
-  font-size: 12px;
-  color: rgba(117, 34, 35, 0.6);
-}
-/* end left big container */
-/* start right small container */
-.rightSmallContainer{
+.rowContainer,
+#nth1 {
   width: 30%;
-  height: 335px;
 }
-.rightSmallContainer img{
-  width: 100%;
-  height: 160px;
+.rowContainer,
+#nth2 {
+  width: 30%;
 }
-.rightSmallContainer h4{
-  margin: 7px 0 0 0;
-  color: black;
+.likes {
+  color: #ff7878;
 }
-.rightSmallContainer a img:hover{
-  opacity: 0.5;
-  transition: .5s ease;
+h2,
+.likes,
+p {
+  margin-left: 3%;
 }
-.rightSmallContainer a{
-  text-decoration: none;
-}
-.rightSmallContainer a:hover{
-  text-decoration: underline;
-}
-.rightSmallContainer p{
-  font-size: 14px;
-  color: #828282
-}
-.rightSmallContainer p a{
-  color : #B50B0B;
-}
-.rightSmallContainer p a:hover{
-  font-size: 15px;
-}
-/* end right small container */
-/* start bottom container */
-.bottomContainer{
-  display: flex;
-  justify-content: space-between;
-}
-/* end bottom container */
 /* end body */
 
+.input {
+  text-decoration: none;
+  margin-left: 7px;
+  background-color: #742223;
+  border: 0;
+  color: white;
+  font-family: Roboto;
+  font-style: Regular;
+  font-size: 15px;
+}
 
+.input:hover {
+  font-size: 17px;
+  color: #eae4ac;
+  cursor: pointer;
+}
 
+.navbar {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 70px;
+  background-color: #fafafa;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigationItems {
+  justify-content: center;
+}
+
+.navigationItems ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0px;
+}
+
+.navigationItems a {
+  font-family: Roboto;
+  text-decoration: none;
+  color: #752223;
+  display: block;
+  padding: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navigationItems a:hover {
+  text-decoration: underline;
+}
+
+.navbar .logo {
+  width: 100px;
+  height: 50px;
+}
+
+.navbar .star {
+  width: 30px;
+}
+
+.navImg {
+  align-items: center;
+}
+
+.containernav {
+  display: flex;
+  width: 1140px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* start header */
+.header {
+  width: 100%;
+  height: 40px;
+  background-color: #752223;
+  display: flex;
+  justify-content: flex-end;
+}
+.headerForm {
+  display: flex;
+  align-items: center;
+  align: left;
+  margin-right: 10px;
+}
+
+.input {
+  background-color: #742223;
+  border: 0;
+  color: white;
+  font-family: Roboto;
+  font-style: Regular;
+  font-size: 15px;
+}
+
+.input:hover {
+  font-size: 17px;
+  color: #eae4ac;
+  cursor: pointer;
+}
+/* end header */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #752223;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  font-family: Roboto;
+  font-size: 14px;
+  color: white;
+}
 @media only screen and (max-width: 650px) {
-  .topContainer{
+  .topContainer {
     margin-bottom: 165px;
   }
 }

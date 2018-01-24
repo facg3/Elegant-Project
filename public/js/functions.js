@@ -19,7 +19,9 @@ function fetchFunction(url, data, cb) {
 function burgerAction() {
   const div = document.getElementById('sidebar');
   const btn = document.getElementById('burgerButton');
+  div.classList.remove('unactive');
   div.classList.toggle('active');
+  btn.classList.add('hidden');
 }
 
 let save;
@@ -143,4 +145,36 @@ function savedpage(id) {
       }
     },
   );
+}
+
+function blogArticleId(id) {
+  fetchFunction('/blogArtical', JSON.stringify({ blogId: id }), (err, res) => {
+    if (err) console.log(err);
+  });
+}
+
+function closeNav() {
+  const div = document.getElementById('sidebar');
+  const btn = document.getElementById('burgerButton');
+  div.classList.remove('active');
+  btn.classList.remove('hidden');
+  div.classList.add('unactive');
+}
+
+function btnClickOutfits(id) {
+  let saved;
+  const elem = document.getElementById(id);
+  const heart = elem.className;
+  const p = document.getElementById('text');
+  const modal = document.getElementById('myModal');
+  const span = document.getElementById('close');
+  if (heart === 'fa fa-heart-o') {
+    saved = true;
+    elem.classList.remove('fa-heart-o');
+    elem.classList.add('fa-heart');
+  } else {
+    saved = false;
+    elem.classList.remove('fa-heart');
+    elem.classList.add('fa-heart-o');
+  }
 }

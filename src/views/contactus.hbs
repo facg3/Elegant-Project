@@ -1,1 +1,44 @@
-   
+
+<header class="header">
+  <form id="headerForm" class="headerForm" action="" method="post">
+    {{#if login}}
+    <a class="input1" href="/saved-fashion">Saved</a>
+    <a class="input1" href="/logout">logout</a>
+    {{else}}
+    <a class="input1" href="/login">Login</a>
+    <a class="input1" href="/signup">Sign Up</a>
+    {{/if}}
+
+  </form>
+</header>
+<div id="navbar" class="navbar">
+  <div class="containernav">
+    {{>nav}}
+    <img src="./image/star.png" class="star" alt="star">
+</div>
+</div>
+<div class="cont">
+<div class="container" id="container">
+  <h1 class="h1">Contact Us</h1>
+  <form class="contact" action="#" method="post">
+    <div class="information">
+      <input type="text" name="name" value="" class="input" placeholder="Your name">
+      <input type="email" name="email" value="" class="input" placeholder="Your email">
+    </div>
+    <input type="text" value="" class="comment" name="comment"  placeholder="Your message">
+    <button type="submit" name="button" id="btn">Send</button>
+  </form>
+</div>
+</div>
+
+<footer class="footer">2018 Elegant.com © All Rights Reserved</footer>
+<script type="text/javascript">
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<link rel="stylesheet" href="css/contactus.css">

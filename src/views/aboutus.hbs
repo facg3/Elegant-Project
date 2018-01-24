@@ -1,0 +1,43 @@
+<header class="header">
+  <form id="headerForm" class="headerForm" >
+    {{#if login}}
+    <a class="input" href="/saved-fashion">Saved</a>
+    <a class="input" href="/logout">Logout</a>
+    {{else}}
+    <a class="input" href="/login">Login</a>
+    <a class="input" href="/signup">Sign Up</a>
+    {{/if}}
+
+  </form>
+</header>
+
+<div id="navbar" class="navbar">
+  <div class="containernav">
+    {{>nav}}
+    <img src="./image/star.png" class="star" alt="star">
+</div>
+</div>
+<div class="container" id="container">
+  <h1 class="h1">About Us</h1>
+  <div class="parag">
+    <p class="p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+      desktop publishing software like Aldus PageMaker including versions of Lorem.</p>
+  </div>
+  <center>
+    <div class="row">
+      <div class="column">
+        <img src="./imgs/walaa.png" alt="walaa">
+      </div>
+      <div class="column">
+        <img src="./imgs/mahmoud.jpeg" alt="walaa">
+      </div>
+      <div class="column">
+        <img src="./imgs/salam.jpeg" alt="salam">
+      </div>
+  </center>
+  </div>
+</div>
+<footer class="footer">2018 Elegant.com © All Rights Reserved</footer>
+
+<link rel="stylesheet" href="css/aboutus.css">

@@ -27,9 +27,18 @@ exports.get = (req, res) => {
             womenFashion,
             style: 'style',
             title: 'Women Fashion',
+            login: true,
           });
         });
       }
+    } else {
+      return res.render('women', {
+        layout: 'fashion',
+        womenFashion,
+        style: 'style',
+        title: 'Women Fashion',
+        login: false,
+      });
     }
   });
 };

@@ -10,7 +10,6 @@ const login = (dataUser, cb) => {
     if (err) {
       cb(err, null);
     } else if (result.rows.length === 0) {
-      console.log(result.rows.length);
       cb(err, null);
     } else {
       const passwordFromDB = result.rows[0].password;
