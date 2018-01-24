@@ -1,23 +1,41 @@
 <div id="navbar" class="navbar">
   <div class="containernav">
+
     {{>nav}}
+
     <img src="./image/star.png" class="star" alt="star">
-</div>
+  </div>
 </div>
 <div class="container">
-<div class="boxs">
-  {{#each menFashion}}
-<div class="box">
-  <div class="innerbox">
-    <a class="a" href="/details/"><img src="./image/men/{{img}}" alt="fashion"></a>
+  <div class="boxs">
+    {{#each menFashion}}
+      <div class="box">
+        <div class="innerbox">
+          <a class="a" href="/details/{{id}}"><img src="./image/men/{{img}}" alt="fashion"></a>
+        </div>
+        <p>{{title}}</p>
+
+        {{# if saved}}
+          <p class="info">{{price}} NIS <a><i id="{{id}}" class="fa fa-heart" onclick="btnClick({{id}})"></i></a></p>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span id="close" class="close">&times;</span>
+              <p id="text"></p>
+            </div>
+          </div>
+          {{else}}
+            <p class="info">{{price}} NIS <a><i id="{{id}}" class="fa fa-heart-o" onclick="btnClick({{id}})"></i></a></p>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span id="close" class="close">&times;</span>
+                <p id="text"></p>
+              </div>
+            </div>
+            {{/if}}
+      </div>
+    {{/each}}
   </div>
-  <p>{{title}}</p>
-
-  <p class="info">{{price}} NIS <a><i class="fa fa-heart-o" onclick="btnClick()"></i></a></p>
-</div>
-  {{/each}}
-</div>
 </div>
 </div>
 
-<script src="js/menFashion.js"></script>
+<script src="js/functions.js"></script>

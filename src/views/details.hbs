@@ -1,40 +1,30 @@
 <div id="navbar" class="navbar">
   <div class="containernav">
+
     {{>nav}}
-    <img src="./image/star.png" class="star" alt="star">
-</div>
+
+    <img src="/image/star.png" class="star" alt="star">
+  </div>
 </div>
 <div class="Container">
 <div class="topContainer">
-  <div class="bigphoto style"></div>
-  <div class="rightContainer">
-    <div class="cont1 style">
-      <div class="pic "></div>
-      <h4 class="price"></h4>
-      <h4 class="shopname"></h4>
-    </div>
-    <div class="cont2 style">
-      <div class="pic"></div>
-      <h4 class="price"></h4>
-      <h4 class="shopname"></h4>
-    </div>
+
+  <div class="bigphoto style">
+    <img src="/image/{{bigimg.gender}}/{{bigimg.img}}" alt="">
   </div>
+  <div class="photos">
+{{#each details}}
+
+  <div class="rightContainer">
+      <div class="style">
+        <img src="/image/details/{{gender}}/{{cloth_id}}/{{detailimg}}" alt="">
+      </div>
+      <div class="info">
+        <h4 class="price">{{price}} <span style="color:#752223">NIS</span></h4>
+        <h4 class="shopname">{{shop_name}} <span style="color:#752223">SHOP</span></h4>
+      </div>
+    </div>
+{{/each}}
 </div>
-<div class="bottomContainer">
-    <div class="cont11 style">
-      <div class="pic"></div>
-      <h4 class="price"></h4>
-      <h4 class="shopname"></h4>
-    </div>
-    <div class="cont12 style">
-      <div class="pic"></div>
-      <h4 class="price"></h4>
-      <h4 class="shopname"></h4>
-    </div>
-    <div class="cont13 style">
-      <div class="pic"></div>
-      <h4 class="price"></h4>
-      <h4 class="shopname"></h4>
-    </div>
-</div>
+
 </div>
