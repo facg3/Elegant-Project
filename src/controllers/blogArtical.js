@@ -21,7 +21,7 @@ exports.post = (req, res) => {
     if (errInLikeBlog) {
       res.status(400).send();
     } else {
-      res.json(result)
+      res.json(result).send();  
     }
   });
 };

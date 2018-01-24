@@ -36,11 +36,8 @@ function btnClickLike(blogId) {
   elem.classList.remove('fa-heart-o');
   elem.classList.add('fa-heart');
   fetchFunction(`/blogs/article/${blogId}`,null,(err,res)=>{
-    if(err)console.log(err);
     else {
-      console.log(res[0].likes);
       const likespan = document.getElementById('likespan');
-      console.log(likespan);
       likespan.textContent = res[0].likes;
       }
     })
