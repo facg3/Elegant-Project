@@ -1,72 +1,25 @@
-<header class="header">
-  <form id="headerForm" class="headerForm" action="" method="post">
-    {{#if login}}
-    <a class="input" href="/saved-fashion">Saved</a>
-    <a class="input" href="/logout">logout</a>
-    {{else}}
-    <a class="input" href="/login">Login</a>
-    <a class="input" href="/signup">Sign Up</a>
-    {{/if}}
-
-  </form>
-</header>
-<div class="sidebar" id="sidebar">
-  <a id="closebtn" class="closebtn" onclick="closeNav()">&times;</a>
-  <ul class="mainnav">
-    <li>
-      <div class="divHome">Home</div>
-    </li>
-
-    <li>
-      <div class="manMenu">
-        <div class="manWord" href="/men-fashion">Men
-          <div class="submenu1">
-            <a href="/men-outfits">Outfits</a>
-            <a href="/men-fashion">Fashions</a>
-          </div>
-
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="womanMenu">
-        <div class="womanWord" href="/men-fashion">Women
-          <div class="submenu2">
-            <a href="/women-outfits">Outfits</a>
-            <a href="/women-fashion">Fashions</a>
-          </div>
-
-        </div>
-      </div>
-    </li>
-    <li>
-      <a href="/blogs">Blogs</a>
-    </li>
-    <li>
-      <a href="/saved-fashion">My Account</a>
-    </li>
-    <li>
-      <a href="/aboutus">About Us</a>
-    </li>
-    <li>
-      <a href="/contactus">Contact Us</a>
-    </li>
-  </ul>
-</div>
-<div class="burgerAndLogo">
-    <img src="./image/logo.png" alt="logo" class="logo">
-    <i id="burgerButton"class="material-icons" onclick="burgerAction()">menu</i>
-
-</div>
-<div class="container" class="container">
+<div class="container">
   <div class="womanStyle">
     <img class="imgWoman" src="./image/woman2.png" alt="man-style">
-    <p class="pWoman">Stylish, well-proportioned looks from some of our best brands</p>
+  </div>
+  <div class="centerBox">
+
+    <img src="./image/logo.png" alt="logo" class="logo">
+    <div class="">
+      <p>
+        <h3>Being fashionable is made easy, affordable and fun!</h3> Outfits from best local boutiques and clothing shops right on your screen.</p>
+      <div class="ebody">
+        <a href="/shop" class="button">SHOP NOW</a>
+      </div>
+    </div>
   </div>
   <div class="manStyle">
-    <p class="pMan">Bright, bold, & saturated with color. You'll never have a dull moment this spring</p>
     <img class="imgMan" src="./image/man2.png" alt="woman-style">
   </div>
 </div>
 <div class="line"></div>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="css/button.css">
 <script src="./js/functions.js"></script>
+<script src="./js/index.js"></script>

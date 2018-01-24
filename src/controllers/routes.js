@@ -17,6 +17,7 @@ const womenOutfits = require('./womenOutfits');
 const saved = require('./savedFashion');
 const unsaved = require('./unsaved');
 const blogArtical = require('./blogArtical');
+const shop = require('./shop');
 const blogs = require('./blogs');
 const error = require('./error');
 
@@ -35,6 +36,7 @@ router.get('/saved-fashion', saved.get);
 router.post('/saved', saved.post);
 router.get('/', home.get);
 router.get('/men-fashion', men.get);
+router.get('/shop', shop.get);
 router.get('/women-fashion', women.get);
 router.get('/women-outfits', womenOutfits.get);
 router.get('/men-outfits', menOutfits.get);

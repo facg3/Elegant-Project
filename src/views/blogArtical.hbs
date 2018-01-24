@@ -1,11 +1,11 @@
 <header class="header">
-  <form id="headerForm" class="headerForm" action="" method="post">
+  <form id="headerForm" class="headerForm">
     {{#if login}}
-    <a class="input" href="/saved-fashion">Saved</a>
-    <a class="input" href="/logout">logout</a>
+      <a class="input" href="/saved-fashion">Saved <i class="fa fa-heart" aria-hidden="true"></i></a>
+      <a class="input" href="/logout">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
     {{else}}
-    <a class="input" href="/login">Login</a>
-    <a class="input" href="/signup">Sign Up</a>
+      <a class="input" href="/login">Login</a>
+      <a class="input" href="/signup">Sign Up</a>
     {{/if}}
 
   </form>
@@ -13,23 +13,23 @@
 <div id="navbar" class="navbar">
   <div class="containernav">
     {{>nav}}
-    <img src="/image/star.png" class="star" alt="star">
-</div>
+    <p></p>
+  </div>
 </div>
 
 {{#each blogdata}}
-<div class="container" id="container" onload="showLikes({{id}})">
-  <div class="insideContainer">
-    <div class="photoAndText">
-      <span>{{title}}</span>
-      <img src="/image/blogImgs/{{img}}" alt="">
+  <div class="container" id="container" onload="showLikes({{id}})">
+    <div class="insideContainer">
+      <div class="photoAndText">
+        <span>{{title}}</span>
+        <img src="/image/blogImgs/{{img}}" alt="">
+      </div>
+      <p> <span id="likespan">{{likes}}</span> : likes <i class="fa fa-heart-o" onclick="btnClickLike({{id}})"></i> </p>
+      <p>
+        {{article}}
+      </p>
     </div>
-    <p> <span id="likespan">{{likes}}</span> : likes <i class="fa fa-heart-o" onclick="btnClickLike({{id}})"></i> </p>
-    <p>
-    {{article}}
-    </p>
   </div>
-</div>
 {{/each}}
 
 <script src="/js/functions.js" charset="utf-8"></script>

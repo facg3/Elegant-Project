@@ -1,5 +1,15 @@
 const dbconnection = require('../database/db_connection');
 
+const viewAllFashion = (cb) => {
+  const Sql = {
+    text: 'select * from cloths ',
+  };
+  dbconnection.query(Sql, (error, Fashion) => {
+    if (error) return cb(error);
+
+    return cb(null, Fashion.rows);
+  });
+};
 const viewMenFashion = (cb) => {
   const viewMenFashionSql = {
     text: "select * from cloths where gender = 'men'",
@@ -26,4 +36,4 @@ const viewSavedMenFashion = (userId, cb) => {
   });
 };
 
-module.exports = { viewMenFashion, viewSavedMenFashion };
+module.exports = { viewMenFashion, viewSavedMenFashion, viewAllFashion };

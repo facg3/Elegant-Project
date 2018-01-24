@@ -1,11 +1,11 @@
 <header class="header">
-  <form id="headerForm" class="headerForm" action="" method="post">
+  <form id="headerForm" class="headerForm">
     {{#if login}}
-    <a class="input" href="/saved-fashion">Saved</a>
-    <a class="input" href="/logout">logout</a>
+      <a class="input" href="/saved-fashion">Saved <i class="fa fa-heart" aria-hidden="true"></i></a>
+      <a class="input" href="/logout">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
     {{else}}
-    <a class="input" href="/login">Login</a>
-    <a class="input" href="/signup">Sign Up</a>
+      <a class="input" href="/login">Login</a>
+      <a class="input" href="/signup">Sign Up</a>
     {{/if}}
 
   </form>
@@ -13,39 +13,39 @@
 
 <div id="navbar" class="navbar">
   <div class="containernav">
-  {{>nav}}
-    <img src="./image/star.png" class="star" alt="star">
-</div>
+    {{>nav}}
+    <p></p>
+  </div>
 </div>
 <div class="container">
-<div class="boxs">
-  {{#each womenFashion}}
-<div class="box">
-  <div class="innerbox">
-    <a class="a" href="#"><img src="./image/women/{{img}}" alt="fashion"></a>
-  </div>
-  <p>{{title}}</p>
-  {{# if saved}}
-    <p class="info">{{price}} NIS <a><i id="{{id}}" class="fa fa-heart" onclick="btnClick({{id}})"></i></a></p>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span id="close" class="close">&times;</span>
-        <p id="text"></p>
-      </div>
-    </div>
-    {{else}}
-      <p class="info">{{price}} NIS <a><i id="{{id}}" class="fa fa-heart-o" onclick="btnClick({{id}})"></i></a></p>
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span id="close" class="close">&times;</span>
-          <p id="text"></p>
+  <div class="boxs">
+    {{#each womenFashion}}
+      <div class="box">
+        <div class="innerbox">
+          <a class="a" href="/details/{{id}}"><img src="./image/women/{{img}}" alt="fashion"></a>
         </div>
-      </div>
-      {{/if}}
+        <p>{{title}}</p>
+        {{# if saved}}
+          <p class="info">{{price}} NIS <a><i id="{{id}}" class="fa fa-heart" onclick="btnClick({{id}})"></i></a></p>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span id="close" class="close">&times;</span>
+              <p id="text"></p>
+            </div>
+          </div>
+          {{else}}
+            <p class="info">{{price}} NIS <a><i id="{{id}}" class="fa fa-heart-o" onclick="btnClick({{id}})"></i></a></p>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span id="close" class="close">&times;</span>
+                <p id="text"></p>
+              </div>
+            </div>
+            {{/if}}
 
-</div>
-  {{/each}}
-</div>
+      </div>
+    {{/each}}
+  </div>
 </div>
 </div>
 
