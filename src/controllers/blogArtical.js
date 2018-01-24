@@ -7,8 +7,22 @@ exports.get = (req, res) => {
     if (errInOneBlog) response.status(404).send();
     else {
       return res.render('blogArtical', {
-        layout: 'fashion', blogdata, style: 'blogArtical', title: 'blog Articl',
+        layout: 'fashion',
+        blogdata,
+        style: 'blogArtical',
+        title: 'blog Articl',
       });
+    }
+  });
+};
+
+exports.post = (req, res) => {
+  const blogId = req.params.id;
+  view.likes(blogId, (errInLikeBlog, result) => {
+    if (errInLikeBlog) {
+      res.status(400).send();
+    } else {
+      res.json(result);
     }
   });
 };

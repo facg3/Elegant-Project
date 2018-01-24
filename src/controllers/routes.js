@@ -1,9 +1,11 @@
 const express = require('express');
-
 const router = express.Router();
 const login = require('./login');
+<<<<<<< HEAD
 const details = require('./details');
 const signup = require('./signup');
+=======
+>>>>>>> 26a78b204be006ef8c73dcfe2a9d10a8cd12348e
 const aboutus = require('./aboutus');
 const contactus = require('./contactus');
 const blogArtical = require('./blogArtical');
@@ -22,7 +24,11 @@ router.post('/loginuser', login.post);
 router.get('/aboutus', aboutus.get);
 router.get('/contactus', contactus.get);
 router.get('/blogs/article/:id', blogArtical.get);
+<<<<<<< HEAD
 router.get('/blogArtical', blogArtical.get);
+=======
+router.post('/blogs/article/:id', blogArtical.post);
+>>>>>>> 26a78b204be006ef8c73dcfe2a9d10a8cd12348e
 router.get('/blogs', blogs.get);
 router.get('/logout', logout.get);
 router.get('/details/:id', details.get);
