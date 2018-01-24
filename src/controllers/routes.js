@@ -18,6 +18,7 @@ const menOutfits = require('./menOutfits');
 const womenOutfits = require('./womenOutfits');
 const saved = require('./savedFashion');
 const unsaved = require('./unsaved');
+const error = require('./error');
 
 router.post('/signup', signup.post);
 router.post('/loginuser', login.post);
@@ -43,5 +44,8 @@ router.get('/women-fashion', women.get);
 router.get('/women-outfits', womenOutfits.get);
 router.get('/men-outfits', menOutfits.get);
 router.post('/unsaved', unsaved.post);
+router.use(error.client);
+router.use(error.server);
+
 
 module.exports = router;

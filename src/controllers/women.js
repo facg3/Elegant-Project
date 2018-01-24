@@ -2,13 +2,9 @@ const viewWomenFa = require('../models/queries/viewWomenFashion');
 const viewMenFa = require('../models/queries/viewMenFashion');
 const jwt = require('jsonwebtoken');
 
-exports.get = (req, res) => {
+exports.get = (req, res, next) => {
   viewWomenFa((dataBaseConnectionError, womenFashion) => {
-    if (dataBaseConnectionError) {
-      return res.status(500).send({
-        error: dataBaseConnectionError,
-      });
-    }
+    if (dataBaseConnectionError) return next(dataBaseConnectionError);
     const { accessToken } = req.cookies;
     if (accessToken) {
       const verifyCookie = jwt.verify(accessToken, process.env.SECRET_COOKIE);
@@ -31,5 +27,6 @@ exports.get = (req, res) => {
         });
       }
     }
+    return null;
   });
 };
