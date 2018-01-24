@@ -3,7 +3,13 @@ body {
   padding: 0px;
   background-color: #f7f7f7;
 }
-/* start header */
+.containernav {
+  display: flex;
+  width: 1140px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .header {
   width: 100%;
   height: 40px;
@@ -11,11 +17,16 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+
 .headerForm {
   display: flex;
   align-items: center;
   align: left;
-  margin-right: 10px;
+  margin-right: 25px;
+}
+
+.headerForm a {
+  margin-right: 20px;
 }
 
 .input {
@@ -25,7 +36,6 @@ body {
   border: 0;
   color: white;
   font-family: Roboto;
-  font-style: Regular;
   font-size: 15px;
 }
 
@@ -34,52 +44,52 @@ body {
   color: #eae4ac;
   cursor: pointer;
 }
-/* end header */
-/* burger and logo */
-.logo {
-  height: 69px;
-  width: 140px;
-  transform: translateX(-600px);
-}
-
-.burgerAndLogo {
+.navbar {
   display: flex;
-  flex-direction: row-reverse;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 70px;
+  background-color: #fafafa;
+  align-items: center;
   justify-content: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  margin-top: 15px;
 }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #752223;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+.navigationItems {
+  justify-content: center;
 }
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  font-size: 25px;
-  display: block;
-  transition: 0.3s;
+
+.navigationItems ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0px;
 }
-.active {
-  text-decoration: underline;
-  color: #4f1515;
-}
-.unactive {
+
+.navigationItems a {
+  font-family: Roboto;
   text-decoration: none;
-  color: white;
+  color: #752223;
+  display: block;
+  padding: 18px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.sidenav a:hover {
-  color: #4f1515;
+.navigationItems a:hover {
+  text-decoration: underline;
+}
+
+.navbar .logo {
+  width: 100px;
+  height: 50px;
+}
+
+.navbar .star {
+  width: 30px;
+}
+
+.navImg {
+  align-items: center;
 }
 
 .sidenav .closebtn {
@@ -89,23 +99,22 @@ body {
   font-size: 36px;
   margin-left: 50px;
 }
-/* start container body */
 
 .container {
   text-align: center;
   margin-top: 60px;
 }
+
 .parag {
   width: 80%;
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
   margin: 0 auto;
 }
+
 .h1 {
   color: #752223;
   font-family: Roboto;
 }
+
 .row {
   width: 80%;
   display: flex;
@@ -113,10 +122,12 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .column {
   width: 225px;
-  height: 226px; /* Should be removed. Only for demonstration */
+  height: 226px;
 }
+
 .column img {
   width: 225px;
   height: 226px;
@@ -131,9 +142,11 @@ body {
   transform: scale(0.9);
   opacity: 0.7;
 }
+
 .p {
   line-height: 30px;
 }
+
 .footer {
   display: flex;
   justify-content: center;
@@ -144,12 +157,14 @@ body {
   font-size: 14px;
   color: white;
 }
+
 .material-icons {
   cursor: pointer;
   font-size: 56px;
   color: #9e7945;
   transform: translateX(58px);
 }
+
 @media (max-width: 650px) {
   .logo {
     transform: translateX(-130px);
@@ -170,4 +185,37 @@ body {
   .parag {
     width: 100%;
   }
+}
+
+.menu > .sub {
+  display: none;
+  position: relative;
+}
+
+.menu:hover .sub {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.sub {
+  display: none;
+  position: absolute;
+  background-color: #752223;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.sub a {
+  float: none;
+  color: #f9f9f9;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.sub a:hover {
+  background-color: #ddd;
+  color: #752223;
 }

@@ -6,12 +6,11 @@ exports.get = (req, res) => {
   if (cookie) {
     const verifyCookie = jwt.verify(cookie, process.env.SECRET_COOKIE);
     if (verifyCookie) {
-      res.render('home', {
-        activePage: { login: true },
-      });
+      res.render('home', { style: 'home', title: 'Elegant', layout: 'home' });
     }
   } else {
     res.render('login', {
+      layout: false,
       activePage: {
         login: true,
       },
@@ -21,7 +20,6 @@ exports.get = (req, res) => {
 
 exports.post = (req, res) => {
   const dataUser = req.body;
-  console.log(dataUser);
   queries.login(dataUser, (err, result, data) => {
     if (err) {
       res.status(401).send();

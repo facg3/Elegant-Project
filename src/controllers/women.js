@@ -1,10 +1,41 @@
 const viewWomenFa = require('../models/queries/viewWomenFashion');
+const viewMenFa = require('../models/queries/viewMenFashion');
+const jwt = require('jsonwebtoken');
 
-exports.get = (req, res,next) => {
+exports.get = (req, res, next) => {
   viewWomenFa((dataBaseConnectionError, womenFashion) => {
     if (dataBaseConnectionError) return next(dataBaseConnectionError);
-    return res.render('women', {
-      layout: 'fashion', womenFashion, style: 'style', title: 'Women Fashion',
-    });
+    const { accessToken } = req.cookies;
+    if (accessToken) {
+      const verifyCookie = jwt.verify(accessToken, process.env.SECRET_COOKIE);
+      if (verifyCookie) {
+        const data = jwt.decode(accessToken);
+        viewMenFa.viewSavedMenFashion(data.id, (err, result) => {
+          womenFashion.forEach((womenclothe) => {
+            result.forEach((savedclothe) => {
+              if (womenclothe.id === savedclothe.id) {
+                womenclothe.saved = true;
+              }
+            });
+          });
+          return res.render('women', {
+            layout: 'fashion',
+            womenFashion,
+            style: 'style',
+            title: 'Women Fashion',
+            login: true,
+          });
+        });
+      }
+    } else {
+      return res.render('women', {
+        layout: 'fashion',
+        womenFashion,
+        style: 'style',
+        title: 'Women Fashion',
+        login: false,
+      });
+    }
+    return null;
   });
 };

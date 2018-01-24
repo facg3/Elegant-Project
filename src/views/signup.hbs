@@ -1,24 +1,26 @@
-<div class="main">
-  <header class="header"></header>
-  <div class="container">
-    <img src="./image/logo.png" alt="">
-    <h1 class="h1">Create New Account</h1>
-    <form class="form" id='registerForm' method="post" novalidate>
-      <input class="input" type="text" id='username' placeholder="Username" >
-      <input class="input" type="email" id='email' placeholder="Email" >
-      <input class="input" type="password" id='password' placeholder="Password">
-        <div class="checkbox"><input type="checkbox" id="chkOwner" onclick="ShowHideDiv(this)"> Are you shop owner?</div>
-        <div id="divchkOwner" class="divchkOwner" style="display: none">
-        <input class="input" type="text" id='shopname' placeholder="Shopname" required>
-        <input class="input" type="text" id='address' placeholder="Address" required>
-      </div>
-      <button class="button" type="submit" name="button" id="btn">Register</button>
-      <div class="massage" id="massage"></div>
-      <h4 class="h4">Already have an account? <a class="a" href="/login">Login</a></h4>
-      <div id="paragraph">
-      </div>
-    </form>
-  </div>
+<header class="header">
+</header>
+<div class="container">
+  <img src="./image/logo.png" alt="">
+  <h1 class="h1">Create New Account</h1>
+  <form class="form" id='registerForm' method="post" novalidate>
+    <input class="input" type="text" id='username' placeholder="Username">
+    <input class="input" type="email" id='email' placeholder="Email">
+    <input class="input" type="password" id='password' placeholder="Password">
+    <div class="checkbox"><input type="checkbox" id="chkOwner" onclick="ShowHideDiv(this)"> Are you shop owner?</div>
+    <div id="divchkOwner" class="divchkOwner" style="display: none">
+      <input class="input" type="text" id='shopname' placeholder="Shopname" required>
+      <input class="input" type="text" id='address' placeholder="Address" required>
+    </div>
+    <button class="button" type="submit" name="button" id="btn">Register</button>
+    <div class="massage" id="massage"></div>
+    <h4 class="h4">Already have an account? <a class="a" href="/login">Login</a></h4>
+    <div id="paragraph">
+    </div>
+  </form>
 </div>
+
+<footer class="footer">2018 Elegant.com © All Rights Reserved</footer>
+<link rel="stylesheet" href="css/signup.css">
 <script type="text/javascript" src="js/signupdom.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
