@@ -3,7 +3,7 @@ body {
   padding: 0px;
   background-color: #f7f7f7;
 }
-/* start header */
+
 .header {
   width: 100%;
   justify-content: flex-end;
@@ -11,6 +11,7 @@ body {
   background-color: #752223;
   display: flex;
 }
+
 .headerForm {
   display: flex;
   align-items: center;
@@ -49,14 +50,11 @@ body {
   color: #eae4ac;
   cursor: pointer;
 }
-/* end header */
-/* burger and logo */
+
 .logo {
   height: 69px;
   width: 140px;
 }
-
-/*side nav*/
 
 .sidenav {
   height: 100%;
@@ -70,16 +68,19 @@ body {
   transition: 0.5s;
   padding-top: 60px;
 }
+
 .sidenav a {
   padding: 8px 8px 8px 32px;
   font-size: 25px;
   display: block;
   transition: 0.3s;
 }
+
 .active {
   text-decoration: underline;
   color: #4f1515;
 }
+
 .unactive {
   text-decoration: none;
   color: white;
@@ -96,8 +97,7 @@ body {
   font-size: 36px;
   margin-left: 50px;
 }
-/*end side nav*/
-/* start burgerButton */
+
 .burgerButton {
   display: flex;
   text-align: ;
@@ -125,12 +125,14 @@ body {
   align-content: center;
   margin-bottom: 50px;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   width: 746px;
   text-align: center;
 }
+
 .input {
   margin-bottom: 10px;
   width: 350px;
@@ -153,14 +155,17 @@ body {
   font-weight: bold;
   font-size: 18px;
 }
+
 .container form button:hover {
   background-color: #631a1b;
   cursor: pointer;
 }
+
 .information {
   display: flex;
   justify-content: space-between;
 }
+
 .comment {
   width: 98%;
   margin-bottom: 10px;
@@ -172,6 +177,7 @@ body {
   border-color: #a3a3a3;
   font-size: 17px;
 }
+
 .footer {
   display: flex;
   justify-content: center;
@@ -182,12 +188,14 @@ body {
   font-size: 14px;
   color: white;
 }
+
 .material-icons {
   cursor: pointer;
   font-size: 56px;
   color: #9e7945;
   transform: translateX(58px);
 }
+
 @media (max-width: 650px) {
   .logo {
     transform: translateX(-130px);

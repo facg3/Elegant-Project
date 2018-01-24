@@ -1,0 +1,30 @@
+<div id="navbar" class="navbar">
+  <div class="containernav">
+
+    {{>nav}}
+
+    <img src="/image/star.png" class="star" alt="star">
+  </div>
+</div>
+<div class="Container">
+<div class="topContainer">
+
+  <div class="bigphoto style">
+    <img src="/image/{{bigimg.gender}}/{{bigimg.img}}" alt="">
+  </div>
+  <div class="photos">
+{{#each details}}
+
+  <div class="rightContainer">
+      <div class="style">
+        <img src="/image/details/{{gender}}/{{cloth_id}}/{{detailimg}}" alt="">
+      </div>
+      <div class="info">
+        <h4 class="price">{{price}} <span style="color:#752223">NIS</span></h4>
+        <h4 class="shopname">{{shop_name}} <span style="color:#752223">SHOP</span></h4>
+      </div>
+    </div>
+{{/each}}
+</div>
+
+</div>

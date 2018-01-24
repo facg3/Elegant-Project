@@ -65,11 +65,13 @@ body {
   margin-top: 25px;
   text-align: center;
 }
+
 .p {
   color: red;
   text-align: center;
   font-weight: bold;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
