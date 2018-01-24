@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users,shop_owner,cloths,cloths_details,blog,saved CASCADE;
+DROP TABLE IF EXISTS users,shop_owner,cloths,cloths_details,blog,saved,outfits CASCADE;
 
 CREATE TABLE "users" (
     "id" serial NOT NULL,

@@ -1,15 +1,13 @@
 const view = require('../models/queries/viewBlogs.js');
 const jwt = require('jsonwebtoken');
 
-exports.get = (req, res) => {
+exports.get = (req, res, next) => {
   const cookie = req.cookies.accessToken;
   if (cookie) {
     const verifyCookie = jwt.verify(cookie, process.env.SECRET_COOKIE);
     if (verifyCookie) {
       view.viewAllBlogs((dataBaseConnectionError, blog) => {
-        if (dataBaseConnectionError) {
-          return res.status(500).send({ error: dataBaseConnectionError });
-        }
+        if (dataBaseConnectionError) return next(dataBaseConnectionError);
         const newBlog = blog.map((element, i) => {
           element.mod = i % 3;
           return element;
@@ -24,9 +22,7 @@ exports.get = (req, res) => {
       });
     } else {
       view.viewAllBlogs((dataBaseConnectionError, blog) => {
-        if (dataBaseConnectionError) {
-          return res.status(500).send({ error: dataBaseConnectionError });
-        }
+        if (dataBaseConnectionError) return next(dataBaseConnectionError);
         const newBlog = blog.map((element, i) => {
           element.mod = i % 3;
           return element;
@@ -42,9 +38,7 @@ exports.get = (req, res) => {
     }
   } else {
     view.viewAllBlogs((dataBaseConnectionError, blog) => {
-      if (dataBaseConnectionError) {
-        return res.status(500).send({ error: dataBaseConnectionError });
-      }
+      if (dataBaseConnectionError) return next(dataBaseConnectionError);
       const newBlog = blog.map((element, i) => {
         element.mod = i % 3;
         return element;

@@ -25,6 +25,7 @@ function burgerAction() {
 }
 
 let save;
+
 function btnClick(id) {
   const elem = document.getElementById(id);
   const heart = elem.className;
@@ -148,9 +149,15 @@ function savedpage(id) {
 }
 
 function blogArticleId(id) {
-  fetchFunction('/blogArtical', JSON.stringify({ blogId: id }), (err, res) => {
-    if (err) console.log(err);
-  });
+  fetchFunction(
+    '/blogArtical',
+    JSON.stringify({
+      blogId: id,
+    }),
+    (err, res) => {
+      if (err) console.log(err);
+    },
+  );
 }
 
 function closeNav() {
@@ -177,4 +184,27 @@ function btnClickOutfits(id) {
     elem.classList.remove('fa-heart');
     elem.classList.add('fa-heart-o');
   }
+}
+
+function btnClickLike(blogId) {
+  const elem = document.querySelector('i');
+  elem.classList.remove('fa-heart-o');
+  elem.classList.add('fa-heart');
+  fetch(`/blogs/article/${blogId}`, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: null,
+    credentials: 'include',
+  })
+    .then(response => response.json())
+    .then((response) => {
+      const likespan = document.getElementById('likespan');
+      likespan.textContent = response[0].likes;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }

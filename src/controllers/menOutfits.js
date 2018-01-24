@@ -1,15 +1,14 @@
 const viewMenOutfits = require('../models/queries/viewMenOutfits');
 const jwt = require('jsonwebtoken');
 
-exports.get = (req, res) => {
+exports.get = (req, res, next) => {
   const cookie = req.cookies.accessToken;
   if (cookie) {
     const verifyCookie = jwt.verify(cookie, process.env.SECRET_COOKIE);
     if (verifyCookie) {
       viewMenOutfits((dataBaseConnectionError, menOutfits) => {
-        if (dataBaseConnectionError) {
-          return res.status(500).send({ error: dataBaseConnectionError });
-        }
+        if (dataBaseConnectionError) return next(dataBaseConnectionError);
+
         return res.render('menOutfits', {
           layout: 'fashion',
           menOutfits,
@@ -20,9 +19,8 @@ exports.get = (req, res) => {
       });
     } else {
       viewMenOutfits((dataBaseConnectionError, menOutfits) => {
-        if (dataBaseConnectionError) {
-          return res.status(500).send({ error: dataBaseConnectionError });
-        }
+        if (dataBaseConnectionError) return next(dataBaseConnectionError);
+
         return res.render('menOutfits', {
           layout: 'fashion',
           menOutfits,
@@ -34,9 +32,8 @@ exports.get = (req, res) => {
     }
   } else {
     viewMenOutfits((dataBaseConnectionError, menOutfits) => {
-      if (dataBaseConnectionError) {
-        return res.status(500).send({ error: dataBaseConnectionError });
-      }
+      if (dataBaseConnectionError) return next(dataBaseConnectionError);
+
       return res.render('menOutfits', {
         layout: 'fashion',
         menOutfits,

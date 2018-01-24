@@ -4,7 +4,7 @@ body {
   background-color: #f7f7f7;
   height: 100vh;
 }
-/* start header */
+
 .header {
   height: 40px;
   background-color: #752223;
@@ -12,6 +12,7 @@ body {
   justify-content: flex-end;
   width: 100%;
 }
+
 .headerForm {
   display: flex;
   align-items: center;
@@ -35,8 +36,7 @@ body {
   color: #eae4ac;
   cursor: pointer;
 }
-/* end header */
-/* start side bar */
+
 .mainnav li {
   list-style: none;
   margin-left: 0;
@@ -45,11 +45,13 @@ body {
   font-size: 24px;
   margin-left: -40px;
 }
+
 .mainnav li:hover {
   background-color: #521314b3;
   transition: background-color 0.5s cubic-bezier(0.4, 0, 1, 1);
   border-radius: 5.5px;
 }
+
 .sidebar {
   width: 165px;
   height: 100%;
@@ -62,16 +64,20 @@ body {
   transform: translateX(-200px);
   transition: transform 0.5s;
 }
+
 .sidebar a {
   color: white;
   text-decoration: none;
 }
+
 .active {
   transform: translateX(0);
 }
+
 .unactive {
   transform: translateX(-200px);
 }
+
 .closebtn {
   cursor: pointer;
   position: absolute;
@@ -80,6 +86,7 @@ body {
   font-size: 36px;
   margin-left: 50px;
 }
+
 .closebtn:hover {
   color: black;
 }
@@ -89,6 +96,7 @@ body {
   position: relative;
   cursor: pointer;
 }
+
 .submenu1,
 .submenu2 {
   display: none;
@@ -99,16 +107,19 @@ body {
   left: 165px;
   width: 160px;
 }
+
 .manMenu:hover .submenu1,
 .womanMenu:hover .submenu2 {
   display: flex;
   flex-direction: column;
 }
+
 .submenu1 a:hover,
 .submenu2 a:hover {
   transition: transform 0.5s;
   background-color: #5c1718;
 }
+
 .manWord,
 .womanWord {
   color: white;
@@ -116,9 +127,6 @@ body {
   cursor: pointer;
 }
 
-/*
-
- and logo */
 .burgerAndLogo {
   display: flex;
   flex-direction: row-reverse;
@@ -127,26 +135,24 @@ body {
   margin: 0 auto;
   margin-top: 15px;
 }
+
 .logo {
   height: 69px;
   margin: 0 auto;
   width: 140px;
 }
-/* start burgerButton */
+
 .material-icons {
   cursor: pointer;
   color: #9e7945;
   transform: translateX(58px);
   font-size: 56px !important;
 }
+
 .hidden {
   display: none !important;
 }
 
-/* end burgerButton */
-/* end burder and logo*/
-
-/* start container body */
 .pMan,
 .pWoman {
   font-size: 28px;
@@ -154,30 +160,37 @@ body {
   font-style: normal;
   font-weight: bold;
 }
+
 .pMan {
   margin-top: 97px;
   margin-left: 52px;
 }
+
 .pWoman {
   margin-top: 12em;
 }
+
 .container {
   display: flex;
 }
+
 .imgMan {
   height: 526px;
   margin-right: 9px;
   position: relative;
   bottom: 45px;
 }
+
 .imgWoman {
   height: 523px;
   margin-top: 6px;
   margin-left: 20px;
 }
+
 .womanStyle {
   display: flex;
 }
+
 .manStyle {
   display: flex;
 }
@@ -194,6 +207,7 @@ body {
   bottom: 8px;
   z-index: -1;
 }
+
 .divHome {
   color: white;
   margin-bottom: 10px;
@@ -201,6 +215,7 @@ body {
   background-color: #521314b3;
   border-radius: 5.5px;
 }
+
 @media (max-width: 650px) {
   .line {
     transform: rotate(44deg);
@@ -227,6 +242,7 @@ body {
     font-weight: bold;
   }
 }
+
 @media (max-width: 1200px) {
   .line {
     width: 0;

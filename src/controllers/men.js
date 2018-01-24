@@ -1,12 +1,10 @@
 const viewMenFa = require('../models/queries/viewMenFashion');
 const jwt = require('jsonwebtoken');
 
-exports.get = (req, res) => {
+exports.get = (req, res, next) => {
   viewMenFa.viewMenFashion((dataBaseConnectionError, menFashion) => {
     if (dataBaseConnectionError) {
-      return res.status(500).send({
-        error: dataBaseConnectionError,
-      });
+      return next(dataBaseConnectionError);
     }
     const { accessToken } = req.cookies;
     if (accessToken) {

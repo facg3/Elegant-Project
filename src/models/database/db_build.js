@@ -8,6 +8,6 @@ dbConnection.query(sql, (errDB, result) => {
   if (errDB) {
     console.log('Error', errDB);
   } else {
-    console.log('Building successfuly!', result);
+    console.log('Building successfuly!');
   }
 });
