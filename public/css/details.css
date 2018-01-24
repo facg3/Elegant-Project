@@ -132,6 +132,22 @@ body {
   color: white;
 }
 
+.input {
+  text-decoration: none;
+  margin-left: 7px;
+  background-color: #742223;
+  border: 0;
+  color: white;
+  font-family: Roboto;
+  font-style: Regular;
+  font-size: 15px;
+}
+
+.input:hover {
+  font-size: 17px;
+  color: #eae4ac;
+  cursor: pointer;
+}
 .header {
   width: 100%;
   height: 40px;
