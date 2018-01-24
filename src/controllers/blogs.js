@@ -1,8 +1,8 @@
 const view = require('../models/queries/viewBlogs.js');
 
-exports.get = (req, res) => {
+exports.get = (req, res ,next) => {
   view.viewAllBlogs((dataBaseConnectionError, blog) =>{
-    if (dataBaseConnectionError) return res.status(500).send({ error: dataBaseConnectionError });
+    if (dataBaseConnectionError) return next(dataBaseConnectionError);
     const newBlog = blog.map((element, i ) => {
       element.mod = i%3;
       return element;
