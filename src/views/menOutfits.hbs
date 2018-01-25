@@ -4,8 +4,8 @@
       <a class="input" href="/saved-fashion">Saved <i class="fa fa-heart" aria-hidden="true"></i></a>
       <a class="input" href="/logout">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
     {{else}}
-      <a class="input" href="/login">Login</a>
-      <a class="input" href="/signup">Sign Up</a>
+    <a class="input" href="/Login">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+    <a class="input" href="/Signup">Sign Up <i class="fa signup">&#xf25d;</i></a>
     {{/if}}
 
   </form>
@@ -21,7 +21,7 @@
     {{#each menOutfits}}
       <div class="box">
         <div class="innerbox">
-          <a class="a" href="#"><img src="./image/menOutfits/{{img}}" alt="fashion"></a>
+          <a class="a" href="#"><img src="./image/Outfits/men/{{img}}" alt="fashion"></a>
         </div>
         <p>{{title}}</p>
         <p class="info"><a><i id="{{id}}" class="fa fa-heart-o" onclick="btnClickOutfits({{id}})"></i></a></p>

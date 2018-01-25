@@ -27,7 +27,7 @@
   "scripts": {
     "start": "node src/index.js",
     "watch": "nodemon src/index.js",
-    "test": "tape ./src/tests/tests.js | tap-spec",
+    "test": "tape tests.js | tap-spec",
     "pretest": "node src/models/database/db_build.js"
   },
   "repository": {

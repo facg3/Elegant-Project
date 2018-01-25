@@ -19,6 +19,15 @@ body {
   flex-wrap: wrap;
 }
 
+.input .fa-heart,
+.input .fa-sign-out,
+.input .fa-sign-in,
+.input .signup {
+  color: white;
+}
+.signup {
+  font-size: 20px;
+}
 .bigContainer {
   display: flex;
   flex-direction: column;
