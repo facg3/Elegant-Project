@@ -19,14 +19,15 @@
 <div class="cont">
   <div class="container" id="container">
     <h1 class="h1">Contact Us</h1>
-    <form class="contact" action="#" method="post">
+    <form id="form" class="contact" method="post">
       <div class="information">
-        <input type="text" name="name" value="" class="input" placeholder="Your name">
-        <input type="email" name="email" value="" class="input" placeholder="Your email">
+        <input id="name" type="text" name="name"  class="input" placeholder="Your name">
+        <input id="email" type="email" name="email"  class="input" placeholder="Your email">
       </div>
-      <input type="text" value="" class="comment" name="comment" placeholder="Your message">
+      <input id="message" type="text" class="comment" name="comment" placeholder="Your message">
       <button type="submit" name="button" id="btn">Send</button>
     </form>
   </div>
 </div>
 <link rel="stylesheet" href="css/contactus.css">
+<script src="js/contactusDom.js" charset="utf-8"></script>

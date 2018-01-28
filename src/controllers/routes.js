@@ -20,6 +20,7 @@ const blogArtical = require('./blogArtical');
 const shop = require('./shop');
 const blogs = require('./blogs');
 const error = require('./error');
+const send = require('./send');
 
 router.get('/signup', signup.get);
 router.post('/signupuser', signup.post);
@@ -41,6 +42,7 @@ router.get('/women-fashion', women.get);
 router.get('/women-outfits', womenOutfits.get);
 router.get('/men-outfits', menOutfits.get);
 router.post('/unsaved', unsaved.post);
+router.post('/send', send.post);
 router.use(error.client);
 router.use(error.server);
 
