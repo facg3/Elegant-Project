@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const routes = require('./controllers/routes');
+const favicon = require('serve-favicon');
 
 const app = express();
 
@@ -16,12 +17,13 @@ app.engine(
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
     defaultLayout: 'main',
-  })
+  }),
 );
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(favicon(path.join(__dirname, '..', 'public/image', 'icon.ico')));
 app.set('port', process.env.PORT || 4000);
 app.use(routes);
 

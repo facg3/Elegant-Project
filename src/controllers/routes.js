@@ -20,9 +20,11 @@ const blogArtical = require('./blogArtical');
 const shop = require('./shop');
 const blogs = require('./blogs');
 const error = require('./error');
+const signupSchema = require('./validators/signupSchema');
+const validate = require('./validate.js');
 
 router.get('/signup', signup.get);
-router.post('/signupuser', signup.post);
+router.post('/signupuser',validate(signupSchema),signup.post);
 router.post('/loginuser', login.post);
 router.get('/aboutus', aboutus.get);
 router.get('/contactus', contactus.get);

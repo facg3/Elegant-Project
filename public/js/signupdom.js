@@ -7,6 +7,7 @@ const checkbox = document.getElementById('chkOwner');
 const shopname = document.getElementById('shopname');
 const address = document.getElementById('address');
 
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   if (!checkbox.checked) {
@@ -39,6 +40,7 @@ function validateUsernameEmailPassword(cb) {
         username: username.value,
         password: password.value,
         email: email.value,
+        checked : checkbox.checked
       };
     } else {
       data = {
@@ -47,6 +49,7 @@ function validateUsernameEmailPassword(cb) {
         email: email.value,
         shopname: shopname.value,
         address: address.value,
+        checked : checkbox.checked
       };
     }
     massage.textContent = '';
